@@ -31,6 +31,9 @@ _data/
 
 # Artefactos generados
 .ipynb_checkpoints/
+# Salidas de entrenamiento de Trainer (pesos + estado del optimizador: GB)
+ModernBERT-domain-classifier/
+checkpoint-*/
 chroma_storage/
 chroma_clinical/
 *.bak
