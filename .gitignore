@@ -35,3 +35,7 @@ chroma_storage/
 chroma_clinical/
 *.bak
 .DS_Store
+# Modelos entrenados (muy pesados para GitHub)
+sessions/09-huggingface-finetuning/ModernBERT-domain-classifier/
+*.safetensors
+*.pt
