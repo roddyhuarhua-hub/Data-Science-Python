@@ -1,0 +1,40 @@
+{
+"titulo": "¿A quién alcanza el fuego?",
+"escenas": [
+{
+"frase": "¿A quién alcanzan los incendios andinos? Analizamos trece mil doscientas noventa y siete hectáreas quemadas en siete fuegos.",
+"cifra": "13 297",
+"etiqueta": "Hectáreas quemadas en siete incendios"
+},
+{
+"frase": "El riesgo está en el borde. En la franja de un kilómetro hay seis mil ciento sesenta y nueve edificaciones expuestas.",
+"cifra": "6 169",
+"etiqueta": "Edificaciones a menos de un kilómetro"
+},
+{
+"frase": "Sicuani concentra el setenta y cinco por ciento de esta exposición, con el fuego llegando a su periferia urbana.",
+"cifra": "75 %",
+"etiqueta": "Exposición concentrada en Sicuani"
+},
+{
+"frase": "Pero ojo, los datos de edificios son de dos mil veintitrés o antes, así que esto mide exposición, no daño real.",
+"cifra": "2023",
+"etiqueta": "Año máximo de los datos"
+},
+{
+"frase": "Además, una edificación no es siempre vivienda; en Alto Pichigua hay cero coma cinco personas por edificación, pues son corrales.",
+"cifra": "0,5",
+"etiqueta": "Personas por edificación en Alto Pichigua"
+},
+{
+"frase": "En total, solo ciento sesenta y tres techos quedaron dentro del área quemada, confirmando que el peligro real está en la periferia.",
+"cifra": "163",
+"etiqueta": "Edificaciones dentro del área quemada"
+}
+],
+"posts": {
+"linkedin": "Analizamos 7 incendios en el sur andino que quemaron 13 297 hectáreas. Usando Google Open Buildings, descubrimos que el riesgo no está en el centro: solo 163 edificaciones quedaron dentro del área quemada, pero 6 169 están a menos de 1 km. Sicuani concentra el 75 % de esta exposición. El estudio tiene limitaciones claras: los datos de edificios son de 2023 o antes, y una edificación puede ser un corral, con 0,5 personas por edificación en Alto Pichigua. La ciencia de datos con Python nos ayuda a mapear la exposición real al fuego en los Andes.",
+"x": "¿A quién alcanzan los incendios andinos? Analizamos 13 297 ha. Solo 163 edificaciones quedaron dentro, pero 6 169 están a <1 km. Sicuani tiene el 75 % de la exposición. Limitación: datos de 2023. El riesgo real está en la periferia. 🌲🔥📊 #CienciaDeDatos",
+"facebook": "Analizamos 7 incendios en el sur andino que quemaron 13 297 hectáreas. Descubrimos que el riesgo está en el borde: solo 163 edificaciones quedaron dentro, pero 6 169 están a menos de 1 km. Sicuani concentra el 75 % de la exposición. Recuerda que los datos son de 2023. ¡La ciencia de datos salva vidas!"
+}
+}
