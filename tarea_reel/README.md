@@ -2,7 +2,7 @@
 
 Sesión 15 · Del texto a tu voz · Data Science con Python · 24 de octubre de 2026 · Roddy Huarhua
 
-**Reel:** [`salidas/reel.mp4`](salidas/reel.mp4) (49 s, vertical 1080 × 1920) · **Posts:** [`salidas/posts.md`](salidas/posts.md)
+**Reel:** [`salidas/reel.mp4`](salidas/reel.mp4) (49 s, vertical 1080 × 1920) · **Posts:** [`salidas/posts.md`](salidas/posts.md) · **Láminas con la arquitectura del pipeline:** https://claude.ai/artifact/MnepkggQB52bbYSvcoCRV3
 
 ![Portada del reel](salidas/portada.png)
 
