@@ -129,12 +129,17 @@ aud[["id", "duracion_seg", "n_palabras", "n_hablantes", "rtf"]]
 ("code", r'''
 for i in multi:
     print(f"── {i}: diarización ({aud.set_index('id').n_hablantes[i]} hablantes detectados)")
-    print(Path(f"datos/raw/audio/salidas/fw_small/{i}.txt").read_text(encoding="utf-8")[:700], "\n")
+    txt = Path(f"datos/raw/audio/salidas/fw_small/{i}.txt").read_text(encoding="utf-8")
+    print(t2.seudonimizar(txt, t2.nombres_privados())[0][:700], "\n")  # ya seudonimizado (ver sección 6)
 '''),
 ("md", "## 6. Seudonimización\nRegla: se reemplazan DNI (8 dígitos), RUC, teléfonos celulares y correos, y los nombres de **personas privadas** que aparezcan (por ejemplo, vendedores entrevistados en la calle). Los nombres de figuras históricas o públicas que firman documentos públicos (Ricardo Palma, firmantes del Acta de Independencia) no son datos personales protegidos y se mantienen. La lista `NOMBRES_PRIVADOS` se completa después de **leer cada texto**: el método automático no reemplaza la revisión humana."),
 ("code", r'''
 # Completar tras la revisión manual de los textos: {"Nombre real": "Seudónimo"}
-NOMBRES_PRIVADOS = {}
+# Lista {"Nombre real": "Seudónimo"} armada tras leer cada texto; vive en datos/raw/nombres_privados.json (fuera de Git).
+# Revisión: las vecinas entrevistadas en la calle (clip_022 y clip_023) son personas privadas, también con las
+# variantes que el ASR escribió mal. Aurora Coronado (clip_024) habla como representante de Fenmucarinap: se mantiene.
+NOMBRES_PRIVADOS = t2.nombres_privados()
+print("Nombres privados en la lista:", len(NOMBRES_PRIVADOS))
 conteo = {}
 for df, col in [(docs, "texto"), (aud, "texto")]:
     nuevos, ns = zip(*[t2.seudonimizar(t, NOMBRES_PRIVADOS) for t in df[col]])
@@ -217,8 +222,9 @@ import soundfile as sf
 (t2.EJEMPLOS / "img").mkdir(exist_ok=True); (t2.EJEMPLOS / "audio").mkdir(exist_ok=True)
 for r in docs.itertuples():
     im = PImg.open(r.archivo).convert("RGB"); im.thumbnail((900, 900)); im.save(t2.EJEMPLOS / "img" / f"{r.id}.jpg", quality=80)
-for i in aud.id[:3].tolist() + aud.id[10:13].tolist() + multi:
-    x, sr = sf.read(f"datos/raw/audio/{i}.wav"); sf.write(t2.EJEMPLOS / "audio" / f"{i}.ogg", x[: 45 * sr], sr, format="OGG", subtype="VORBIS")
+# Solo clips de OpenSLR: en las entrevistas de Commons se oyen los nombres reales de las vecinas.
+for i in aud.id[:3].tolist() + aud.id[10:13].tolist() + [m for m in multi if aud.set_index("id").fuente_corta[m] == "OpenSLR 73"]:
+    x, sr = sf.read(f"datos/raw/audio/{i}.wav"); t2.guardar_ogg(x[: 45 * sr], sr, t2.EJEMPLOS / "audio" / f"{i}.ogg")
 print(sum(p.stat().st_size for p in t2.EJEMPLOS.rglob("*") if p.is_file()) / 1e6, "MB en datos/ejemplos/")
 '''),
 ]
@@ -320,9 +326,12 @@ print(f"Resultados Test: WER: {mejor_aud.WER:.2f} ({mejor_aud.modelo}) | CER: {m
 ("code", r'''
 por_tipo = pd.concat([base_doc, alt_doc]).groupby(["tipo", "modelo"]).CER.mean().reset_index()
 peor = por_tipo.groupby("tipo").CER.mean()
-fig = px.bar(por_tipo, x="tipo", y="CER", color="modelo", barmode="group",
-             title=f"Los {peor.idxmax()}s son el caso más difícil (CER medio {peor.max():.0%}) y los {peor.idxmin()}s el más fácil ({peor.min():.0%})")
-mostrar(fig, "g4_cer_por_tipo")
+if peor.isna().all():
+    print("Sin referencias de documentos todavía: el gráfico de CER por tipo se genera al completar datos/referencias_documentos.csv")
+else:
+    fig = px.bar(por_tipo, x="tipo", y="CER", color="modelo", barmode="group",
+                 title=f"Los {peor.idxmax()}s son el caso más difícil (CER medio {peor.max():.0%}) y los {peor.idxmin()}s el más fácil ({peor.min():.0%})")
+    mostrar(fig, "g4_cer_por_tipo")
 por_tipo.pivot(index="tipo", columns="modelo", values="CER").round(3)
 '''),
 ("code", r'''
