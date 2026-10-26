@@ -50,18 +50,45 @@ SEMILLAS = [
 # Búsquedas para completar cada tipo (se toman los primeros resultados con licencia libre).
 BUSQUEDAS = {
     "impreso": ["Mercurio Peruano", "El Peruano diario 18", "Gaceta de Lima", "periódico Lima siglo XIX",
-                "decreto Perú impreso", "Constitución Perú 1823"],
+                "decreto Perú impreso", "Constitución Perú 1823", "Gaceta del Gobierno de Lima",
+                "El Comercio Lima 1839 primera página"],
     "foto": ["Placa conmemorativa Lima", "Placa Centro histórico de Lima", "Placa Arequipa", "Placa Cusco",
-             "cartel Lima calle"],
+             "cartel Lima calle", "Placa conmemorativa Miraflores", "Placa conmemorativa Barranco"],
     "manuscrito": ["carta manuscrita Perú", "manuscrito Lima siglo XVIII", "Guaman Poma Nueva coronica",
-                   "Archivo General de la Nación Perú manuscrito", "firma carta Bolívar Lima"],
+                   "Archivo General de la Nación Perú manuscrito", "firma carta Bolívar Lima",
+                   "Guaman Poma primer nueva coronica page", "carta autógrafa Perú", "manuscrito colonial Perú",
+                   "Martínez Compañón Trujillo del Perú"],
+}
+# Revisados a mano tras la primera descarga: no son documentos legibles (retrato, portada sin texto,
+# foto de personas con la placa ilegible, libro en vitrina, recortes de dibujos sin texto).
+EXCLUIR = {
+    "Pedro Beltrán.jpg",
+    "PRESIDENTE HUMALA Y MINISTRO CATERIANO DEVELARON PLACA CONMEMORATIVA DE LA DELIMITACIÓN MARÍTIMA CON CHILE.jpg",
+    "A Guiding Light to the Indians WDL8994.jpg",
+    "El primer nueva corónica y buen gobierno i KBs udstilling 27112012.JPG",
+    "Guaman Poma Nueva Coronica f. 1105v detail.jpg",
+    "Guamán Poma Nueva Coronica f. 661v detail.jpg",
+    "Apolinario Mayta Inga",  # serie de retratos (01, 02, ...): se compara por prefijo
+    "Momia Inca - Guaman Poma de Ayala.jpg",
 }
 META = {"impreso": 8, "foto": 8, "manuscrito": 9}
 LICENCIAS_OK = re.compile(r"(CC0|CC BY|Public domain|PD|Dominio público|attribution)", re.I)
 
 
+def _get(url: str, intentos: int = 6, timeout: int = 60, **kw) -> requests.Response:
+    """GET con reintentos: si Commons responde 429/5xx, espera (Retry-After o 2^k s) y vuelve a pedir."""
+    for k in range(intentos):
+        r = requests.get(url, headers=UA, timeout=timeout, **kw)
+        if r.status_code not in (429, 500, 502, 503, 504) or k == intentos - 1:
+            r.raise_for_status()
+            return r
+        espera = r.headers.get("Retry-After", "")
+        time.sleep(int(espera) if espera.isdigit() else 2 ** (k + 2))
+    return r
+
+
 def _info_commons(titulos: list[str]) -> list[dict]:
-    r = requests.get(API, headers=UA, timeout=60, params={
+    r = _get(API, params={
         "action": "query", "format": "json", "titles": "|".join("File:" + t for t in titulos),
         "prop": "imageinfo", "iiprop": "url|extmetadata|mime|sha1", "iiurlwidth": 1600})
     r.raise_for_status()
@@ -69,7 +96,7 @@ def _info_commons(titulos: list[str]) -> list[dict]:
 
 
 def _buscar_commons(consulta: str, n: int = 15) -> list[str]:
-    r = requests.get(API, headers=UA, timeout=60, params={
+    r = _get(API, params={
         "action": "query", "format": "json", "list": "search", "srnamespace": 6,
         "srsearch": f"{consulta} filetype:bitmap", "srlimit": n})
     r.raise_for_status()
@@ -96,7 +123,11 @@ def recolectar_documentos() -> pd.DataFrame:
         if cuenta[tipo] >= META[tipo] or titulo in vistos:
             continue
         vistos.add(titulo)
+        if any(titulo.startswith(x) for x in EXCLUIR):
+            descartes.append({"archivo": titulo, "motivo": "revisión manual: no es un documento legible"})
+            continue
         pag = _info_commons([titulo])[0]
+        time.sleep(1)
         if "imageinfo" not in pag:
             descartes.append({"archivo": titulo, "motivo": "no existe en Commons"})
             continue
@@ -107,7 +138,7 @@ def recolectar_documentos() -> pd.DataFrame:
             descartes.append({"archivo": titulo, "motivo": f"licencia no libre: {lic}"})
             continue
         url = ii.get("thumburl") or ii["url"]
-        contenido = requests.get(url, headers=UA, timeout=120).content
+        contenido = _get(url, timeout=120).content
         time.sleep(1)
         h = hashlib.sha1(contenido).hexdigest()
         if h in {f["sha1"] for f in filas}:
@@ -199,6 +230,14 @@ def recolectar_audio(n_clips_por_sexo: int = 10, frases_por_clip: int = 16, semi
     tabla["sha1"] = [hashlib.sha1((BASE / r).read_bytes()).hexdigest() for r in tabla["archivo_audio"]]
     tabla.to_csv(indice, index=False)
     return tabla
+
+
+def guardar_ogg(x: np.ndarray, sr: int, ruta: Path) -> None:
+    """Guarda OGG Vorbis por bloques: escribir todo de una vez desborda la pila de libsndfile en Windows."""
+    import soundfile as sf
+    with sf.SoundFile(ruta, "w", sr, 1 if x.ndim == 1 else x.shape[1], format="OGG", subtype="VORBIS") as f:
+        for i in range(0, len(x), 4096):
+            f.write(x[i:i + 4096])
 
 
 # ───────────────────────────────────────────── OCR
@@ -303,6 +342,12 @@ PATRONES = {
     "CORREO": (re.compile(r"\b[\w.+-]+@[\w-]+\.[\w.]+\b"), "[CORREO]"),
     "RUC": (re.compile(r"\b(10|20)\d{9}\b"), "[RUC]"),
 }
+
+
+def nombres_privados() -> dict[str, str]:
+    """{"Nombre real": "Seudónimo"} de datos/raw/nombres_privados.json (fuera de Git: publicar la lista expondría los nombres)."""
+    ruta = RAW / "nombres_privados.json"
+    return json.loads(ruta.read_text(encoding="utf-8")) if ruta.exists() else {}
 
 
 def seudonimizar(texto: str, nombres: dict[str, str]) -> tuple[str, int]:
