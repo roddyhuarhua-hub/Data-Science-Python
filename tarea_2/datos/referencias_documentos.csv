@@ -1,0 +1,11 @@
+id,tipo,archivo,texto_referencia
+doc_002,impreso,datos/raw/documentos/doc_002.jpg,
+doc_012,impreso,datos/raw/documentos/doc_012.jpg,
+doc_001,impreso,datos/raw/documentos/doc_001.jpg,
+doc_005,foto,datos/raw/documentos/doc_005.jpg,
+doc_017,foto,datos/raw/documentos/doc_017.jpg,
+doc_004,foto,datos/raw/documentos/doc_004.jpg,
+doc_024,manuscrito,datos/raw/documentos/doc_024.jpg,
+doc_008,manuscrito,datos/raw/documentos/doc_008.jpg,
+doc_022,manuscrito,datos/raw/documentos/doc_022.jpg,
+doc_007,manuscrito,datos/raw/documentos/doc_007.jpg,
