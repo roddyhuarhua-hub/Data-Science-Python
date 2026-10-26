@@ -360,12 +360,18 @@ def seudonimizar(texto: str, reemplazos: dict[str, str], parecido: int = 80) -> 
         n = len(nombre.split())
         palabras = re.findall(r"\w+|\W+", salida)
         idx = [i for i, p in enumerate(palabras) if re.match(r"\w", p)]
-        cambios = []
+        candidatos = []
         for j in range(len(idx) - n + 1):
             tramo = palabras[idx[j]:idx[j + n - 1] + 1]
-            if fuzz.ratio("".join(tramo).lower(), nombre.lower()) >= parecido:
-                cambios.append((idx[j], idx[j + n - 1]))
-        for a, b in reversed(cambios):
+            puntaje = fuzz.ratio("".join(tramo).lower(), nombre.lower())
+            if puntaje >= parecido:
+                candidatos.append((puntaje, idx[j], idx[j + n - 1]))
+        # tramos vecinos también se parecen ("Pérez Soto y" ≈ "Ana Pérez Soto"): entre los que se solapan, gana el más parecido
+        cambios = []
+        for _, a, b in sorted(candidatos, reverse=True):
+            if all(b < a2 or a > b2 for a2, b2 in cambios):
+                cambios.append((a, b))
+        for a, b in sorted(cambios, reverse=True):
             palabras[a:b + 1] = [seudonimo]
         salida = "".join(palabras)
     return salida

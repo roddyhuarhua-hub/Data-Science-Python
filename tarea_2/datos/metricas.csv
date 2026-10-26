@@ -1,5 +1,5 @@
 modelo,CER,modalidad,WER,RTF,seg_por_pagina
-EasyOCR,,documentos,,,9.63
-PaddleOCR (base),,documentos,,,15.423
+EasyOCR,0.356,documentos,,,9.63
+PaddleOCR (base),0.433,documentos,,,15.423
 Parakeet TDT 0.6B v3,,audio,0.038,0.079,
 faster-whisper small (base),,audio,0.07,1.941,

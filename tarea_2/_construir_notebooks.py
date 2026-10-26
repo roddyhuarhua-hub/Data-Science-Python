@@ -264,7 +264,9 @@ if not ref_doc_csv.exists():
     muestra_doc.assign(texto_referencia="")[["id", "tipo", "archivo", "texto_referencia"]].to_csv(ref_doc_csv, index=False)
 if not ref_aud_csv.exists():
     muestra_aud.assign(texto_referencia=muestra_aud.referencia_dataset, corregido_por_estudiante="")[["id", "archivo_audio", "texto_referencia", "corregido_por_estudiante"]].to_csv(ref_aud_csv, index=False)
-ref_doc = pd.read_csv(ref_doc_csv).fillna(""); ref_aud = pd.read_csv(ref_aud_csv).fillna("")
+ref_doc = pd.read_csv(ref_doc_csv, dtype=str).fillna(""); ref_aud = pd.read_csv(ref_aud_csv, dtype=str).fillna("")
+# Referencia e hipótesis se seudonimizan igual (nombres de personas privadas → [PERSONA_n]) antes de medir
+ref_doc["texto_referencia"] = [t2.seudonimizar(t, t2.nombres_privados())[0] for t in ref_doc.texto_referencia]
 faltan = (ref_doc.texto_referencia.str.strip() == "").sum()
 print(f"Referencias de documentos completas: {10 - faltan}/10" + ("  ← FALTA transcribir a mano" if faltan else ""))
 REF_DOC = dict(zip(ref_doc.id, ref_doc.texto_referencia)); REF_AUD = dict(zip(ref_aud.id, ref_aud.texto_referencia))
@@ -293,6 +295,7 @@ print(f"LÍNEA BASE  CER PaddleOCR = {base_doc.CER.mean():.3f}   |   WER faster-
 ("code", r'''
 alt_ocr = t2.ocr_easyocr([Path(p) for p in muestra_doc.archivo])
 alt_ocr["id"] = alt_ocr.archivo.str.replace(".jpg", "", regex=False)
+alt_ocr["texto"] = [t2.seudonimizar(t, t2.nombres_privados())[0] for t in alt_ocr.texto]  # igual que la línea base
 alt_doc = tabla_cer(dict(zip(alt_ocr.id, alt_ocr.texto)), "EasyOCR")
 try:
     alt_asr = t2.asr_alternativo([Path(p) for p in muestra_aud.archivo_audio], "parakeet-v3"); nombre_alt = "Parakeet TDT 0.6B v3"
