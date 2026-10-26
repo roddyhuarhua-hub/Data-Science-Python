@@ -1,0 +1,8 @@
+datos/raw/
+modelos/*.safetensors
+modelos/*.bin
+modelos/checkpoint-*/
+__pycache__/
+.ipynb_checkpoints/
+*.wav
+!datos/ejemplos/**

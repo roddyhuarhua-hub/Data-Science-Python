@@ -1,0 +1,26 @@
+# Solo para correr los notebooks en la laptop (NO hace falta en Streamlit Cloud)
+paddleocr[doc-parser]>=3.7
+torch
+torchvision
+transformers>=5.16
+faster-whisper>=1.2.1
+av<19
+easyocr
+pyannote-audio>=4.0.7
+jiwer>=4.0
+rapidfuzz
+soundfile
+scipy
+librosa
+scikit-learn
+pandas
+numpy
+requests
+plotly
+kaleido
+pillow
+nbformat
+nbconvert
+ipykernel
+opencv-python==4.10.0.84
+opencv-python-headless==4.10.0.84

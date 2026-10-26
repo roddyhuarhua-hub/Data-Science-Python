@@ -1,0 +1,12 @@
+{
+  "ocr_base": {"modelo": "PaddleOCR 3.x PP-OCRv5", "lang": "es", "engine": "transformers", "device": "cpu",
+               "use_doc_orientation_classify": false, "use_doc_unwarping": false, "use_textline_orientation": false},
+  "ocr_alternativo": {"modelo": "EasyOCR", "idiomas": ["es"], "gpu": false, "paragraph": false},
+  "asr_base": {"modelo": "faster-whisper small", "device": "cpu", "compute_type": "int8", "language": "es",
+               "beam_size": 5, "vad_filter": true, "condition_on_previous_text": false},
+  "asr_alternativo": {"modelo": "nvidia/parakeet-tdt-0.6b-v3 (voz.py, segmentado con Silero VAD)", "device": "cpu",
+                      "respaldo": "openai/whisper-large-v3-turbo"},
+  "diarizacion": {"modelo": "pyannote/wespeaker-voxceleb-resnet34-LM + AgglomerativeClustering coseno", "umbral": 0.7},
+  "llm": {"preferido": "qwen2.5:3b en Ollama (temperature 0, format json)", "respaldo": "Qwen/Qwen2.5-1.5B-Instruct (transformers, greedy)"},
+  "semillas": {"muestra_documentos": 42, "muestra_audio": 42, "auditoria": 7, "clips_openslr": 7}
+}
