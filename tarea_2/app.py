@@ -79,16 +79,16 @@ with tab_res:
     g1, g2 = st.columns(2)
     if len(df_d):
         g1.plotly_chart(px.histogram(df_d.assign(caracteres=df_d.texto_ocr.str.len()), x="caracteres", color="tipo",
-                                     title="Caracteres reconocidos por documento"), use_container_width=True)
+                                     title="Caracteres reconocidos por documento"), width="stretch")
     if len(df_a):
         g2.plotly_chart(px.bar(df_a.sort_values("duracion_seg"), x="id", y="duracion_seg", color="n_hablantes",
-                               title="Duración de cada clip (s) y hablantes detectados"), use_container_width=True)
+                               title="Duración de cada clip (s) y hablantes detectados"), width="stretch")
     if len(met):
         m = met.melt(id_vars=["modelo", "modalidad"], value_vars=[c for c in ["CER", "WER"] if c in met], var_name="métrica", value_name="error").dropna()
         st.plotly_chart(px.bar(m, x="modelo", y="error", color="modalidad", facet_col="métrica",
-                               title="Error de cada modelo sobre las mismas 10 muestras (menor es mejor)"), use_container_width=True)
-        st.dataframe(met, use_container_width=True, hide_index=True)
-    st.dataframe(tabla, use_container_width=True, hide_index=True)
+                               title="Error de cada modelo sobre las mismas 10 muestras (menor es mejor)"), width="stretch")
+        st.dataframe(met, width="stretch", hide_index=True)
+    st.dataframe(tabla, width="stretch", hide_index=True)
     st.download_button("Descargar CSV (textos revisados y seudonimizados)", tabla.to_csv(index=False).encode("utf-8"),
                        "resultados_filtrados.csv", "text/csv")
 
@@ -137,6 +137,6 @@ with tab_aud:
         st.json(json.loads(campos[j]))
 
 with tab_fue:
-    st.dataframe(fue, use_container_width=True, hide_index=True)
+    st.dataframe(fue, width="stretch", hide_index=True)
     st.markdown("OpenSLR 73: Guevara-Rukoz et al. (2020), *Crowdsourcing Latin American Spanish for Low-Resource Text-to-Speech*, LREC. "
                 "Entrevistas e imágenes: Wikimedia Commons, con el autor y la licencia de cada archivo.")
