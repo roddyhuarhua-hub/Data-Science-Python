@@ -2,7 +2,7 @@
 
 **Pregunta:** ¿Podemos convertir documentos escaneados y entrevistas en audio peruanas en un archivo de texto estructurado y buscable?
 
-**Estudiante:** RoddyHuarhua (@roddyhuarhua-hub) · **Dashboard público:** _(pegar aquí el enlace de Streamlit Cloud)_
+**Estudiante:** RoddyHuarhua (@roddyhuarhua-hub) · **Dashboard público:** https://tarea2-roddy.streamlit.app
 
 **Respuesta corta:** sí para impresos y habla clara. Los impresos se leen con un CER de 0,18 y el audio leído se transcribe con un WER de 0,04. Pero las fotos con letras decorativas, los manuscritos y el ruido de la calle todavía necesitan revisión humana, y el LLM acierta en 15 de cada 20 extracciones.
 
