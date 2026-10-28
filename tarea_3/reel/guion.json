@@ -1,0 +1,55 @@
+{
+  "titulo": "Conflictos socioambientales en el Perú, 2015-2026",
+  "fuente": "Defensoría del Pueblo (2015-2026)",
+  "escenas": [
+    {
+      "frase": "¿Sabías que cada mes la Defensoría del Pueblo registra casi doscientos conflictos sociales en el Perú?",
+      "cifra": "≈ 200",
+      "etiqueta": "conflictos registrados al mes, en promedio",
+      "imagen": "recursos/escena_1.png",
+      "dato": "datos/procesados/hallazgos.json: prom_registrados_mes = 199.8 (141 reportes)"
+    },
+    {
+      "frase": "Revisé ciento cuarenta y un reportes mensuales, de dos mil quince a dos mil veintiséis. Seis de cada diez conflictos son socioambientales.",
+      "cifra": "63 %",
+      "etiqueta": "son socioambientales",
+      "imagen": "recursos/escena_2.png",
+      "dato": "hallazgos.json: pct_socioambiental = 0.628"
+    },
+    {
+      "frase": "Y la minería explica la mayoría: sesenta y dos por ciento de ellos. Los hidrocarburos, diecinueve por ciento.",
+      "cifra": "62 %",
+      "etiqueta": "de los socioambientales, por minería",
+      "imagen": "recursos/escena_3.png",
+      "dato": "hallazgos.json: pct_actividad Minería 0.616, Hidrocarburos 0.189"
+    },
+    {
+      "frase": "Cinco regiones concentran la mitad: Loreto, Áncash, Cusco, Puno y Cajamarca. En Loreto, casi todo gira en torno al petróleo.",
+      "cifra": "50 %",
+      "etiqueta": "en solo cinco departamentos",
+      "imagen": "recursos/escena_4.png",
+      "dato": "hallazgos.json: pct_top5_dep = 0.496; Loreto: 93 % de sus socioambientales son de hidrocarburos"
+    },
+    {
+      "frase": "La buena noticia: hoy, ocho de cada diez casos socioambientales activos tienen un proceso de diálogo.",
+      "cifra": "8 de 10",
+      "etiqueta": "casos activos con diálogo",
+      "imagen": "recursos/escena_5.png",
+      "dato": "hallazgos.json: pct_dialogo_por_anio 2022-2026 entre 0.80 y 0.89"
+    },
+    {
+      "frase": "Pero desde dos mil quince se abrieron quinientos noventa y siete conflictos nuevos, y solo se resolvieron doscientos cuarenta y dos.",
+      "cifra": "597 / 242",
+      "etiqueta": "conflictos nuevos / resueltos",
+      "imagen": "recursos/escena_6.png",
+      "dato": "resumen_oficial.csv: suma nuevos = 597, resueltos = 242 (todos los tipos, 140 reportes)"
+    },
+    {
+      "frase": "Dialogar ya es la norma. El reto es que los acuerdos se cumplan. Explora los datos en mi dashboard.",
+      "cifra": "Dashboard",
+      "etiqueta": "enlace en la publicación",
+      "imagen": "recursos/escena_7.png",
+      "dato": "captura del dashboard publicado"
+    }
+  ]
+}

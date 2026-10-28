@@ -4,3 +4,6 @@ datos/originales/defensoria/
 datos/originales/textos/
 .venv/
 __pycache__/
+# Audio intermedio del reel y la nota de voz (no se publica la voz original)
+reel/*.wav
+reel/voz_referencia.*
