@@ -1,0 +1,6 @@
+# Reportes descargados (PDF/HTML): pesan ~400 MB; se documentan por enlace en catalogo_reportes.csv
+datos/originales/defensoria/
+# Texto extraído de los reportes (se regenera con scripts/obtener_datos.py)
+datos/originales/textos/
+.venv/
+__pycache__/
