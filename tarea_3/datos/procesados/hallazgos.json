@@ -1,32 +1,32 @@
 {
   "periodo": [
     "2015-01",
-    "2026-08"
+    "2026-09"
   ],
-  "meses": 140,
-  "filas": 27898,
-  "prom_registrados_mes": 199.3,
-  "pct_socioambiental": 0.619,
+  "meses": 141,
+  "filas": 28166,
+  "prom_registrados_mes": 199.8,
+  "pct_socioambiental": 0.628,
   "pct_actividad": {
-    "Minería": 0.619,
-    "Hidrocarburos": 0.185,
-    "Otros": 0.076,
+    "Minería": 0.616,
+    "Hidrocarburos": 0.189,
+    "Otros": 0.077,
     "Residuos y saneamiento": 0.052,
-    "Energía": 0.034,
-    "Agroindustria y forestal": 0.033
+    "Energía": 0.033,
+    "Agroindustria y forestal": 0.032
   },
   "top5_dep_socioambiental": {
-    "Áncash": 0.125,
-    "Loreto": 0.123,
+    "Loreto": 0.126,
+    "Áncash": 0.122,
     "Cusco": 0.091,
-    "Puno": 0.088,
-    "Cajamarca": 0.071
+    "Puno": 0.086,
+    "Cajamarca": 0.07
   },
-  "pct_top5_dep": 0.498,
+  "pct_top5_dep": 0.496,
   "hidrocarburos_top_dep": {
-    "Loreto": 0.608,
-    "Ayacucho": 0.106,
-    "Piura": 0.056
+    "Loreto": 0.61,
+    "Ayacucho": 0.103,
+    "Piura": 0.057
   },
   "pct_dialogo_por_anio": {
     "2015": 0.587,
@@ -39,16 +39,16 @@
     "2022": 0.87,
     "2023": 0.888,
     "2024": 0.813,
-    "2025": 0.807,
-    "2026": 0.88
+    "2025": 0.801,
+    "2026": 0.815
   },
   "pct_dialogo_por_actividad": {
-    "Agroindustria y forestal": 0.681,
+    "Agroindustria y forestal": 0.676,
     "Energía": 0.755,
-    "Hidrocarburos": 0.816,
-    "Minería": 0.728,
-    "Otros": 0.545,
-    "Residuos y saneamiento": 0.777
+    "Hidrocarburos": 0.815,
+    "Minería": 0.726,
+    "Otros": 0.537,
+    "Residuos y saneamiento": 0.773
   },
   "socioambientales_por_anio": {
     "2015": 142.3,
@@ -60,8 +60,8 @@
     "2021": 127.0,
     "2022": 134.3,
     "2023": 139.6,
-    "2024": 107.4,
-    "2025": 84.1,
-    "2026": 84.4
+    "2024": 113.6,
+    "2025": 98.3,
+    "2026": 94.9
   }
 }

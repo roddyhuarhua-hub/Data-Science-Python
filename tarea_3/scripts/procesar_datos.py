@@ -1,6 +1,7 @@
 """Limpieza y transformación de la base de casos de la Defensoría del Pueblo.
 
-Entrada:  datos/originales/defensoria_casos_por_mes_2015_2026.csv
+Entrada:  datos/originales/defensoria_casos_por_mes_2015_2026.csv  (N.° 131 a 247)
+          datos/procesados/casos_2024_10_a_2026_09.csv            (N.° 248 a 271)
 Salidas:  datos/procesados/casos_limpios.csv   (una fila por caso y por mes)
           datos/procesados/panel_mensual.csv   (conteos por mes, departamento,
                                                 tipo, actividad y estado)
@@ -16,6 +17,10 @@ from actividad import clasificar
 
 BASE = Path(__file__).resolve().parents[1]
 ORIGEN = BASE / "datos" / "originales" / "defensoria_casos_por_mes_2015_2026.csv"
+# Reextracción de oct 2024 (N.° 248) a set 2026 (N.° 271) con scripts/completar_2024_2026.py:
+# en la base original la tabla de activos "sin hechos" de esos meses repetía textos de otros casos.
+COMPLEMENTO = BASE / "datos" / "procesados" / "casos_2024_10_a_2026_09.csv"
+DESDE_COMPLEMENTO = 248
 DESTINO = BASE / "datos" / "procesados"
 
 # Código INEI de departamento (2 dígitos) -> nombre con tildes
@@ -39,7 +44,10 @@ def limpiar_texto(texto):
 
 
 def main():
-    df = pd.read_csv(ORIGEN, dtype=str)
+    original = pd.read_csv(ORIGEN, dtype=str)
+    complemento = pd.read_csv(COMPLEMENTO, dtype=str)
+    original = original[original["reporte_n"].astype(int) < DESDE_COMPLEMENTO]
+    df = pd.concat([original, complemento], ignore_index=True)
     n_inicial = len(df)
 
     # 1. Tipos de dato

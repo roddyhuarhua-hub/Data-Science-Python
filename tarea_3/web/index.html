@@ -50,6 +50,7 @@ nav.tabs{display:flex;gap:4px;margin:18px 0 0;border-bottom:1px solid var(--bord
 nav.tabs a{padding:10px 14px;text-decoration:none;color:var(--ink2);font-weight:600;font-size:14px;border-bottom:2px solid transparent;white-space:nowrap}
 nav.tabs a:hover{color:var(--ink)}
 .filtros{position:sticky;top:0;z-index:5;background:var(--page);padding:12px 0;border-bottom:1px solid var(--border);display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+@media (max-width:640px){.filtros{position:static}}
 .filtros label{display:flex;flex-direction:column;font-size:12px;color:var(--ink2);gap:4px}
 select,input[type=search]{font:inherit;font-size:14px;padding:7px 9px;border-radius:8px;border:1px solid var(--border);background:var(--card);color:var(--ink);min-width:0}
 button{font:inherit;font-size:13px;padding:7px 12px;border-radius:8px;border:1px solid var(--border);background:var(--card);color:var(--ink);cursor:pointer}
@@ -96,7 +97,7 @@ footer{margin:40px 0 30px;font-size:12.5px;color:var(--muted)}
   <p class="pregunta">¿Dónde se concentran los conflictos socioambientales, qué actividades los originan y cuántos llegan a un proceso de diálogo?</p>
   <div class="meta">
     <span><b>Cobertura:</b> Perú, 25 departamentos</span>
-    <span><b>Periodo:</b> enero 2015 – agosto 2026 (140 reportes mensuales)</span>
+    <span><b>Periodo:</b> enero 2015 – setiembre 2026 (141 reportes mensuales)</span>
     <span><b>Fuente:</b> <a href="https://www.defensoria.gob.pe/categorias_de_documentos/reportes-de-conflictos-sociales/" target="_blank" rel="noopener">Defensoría del Pueblo, Reportes Mensuales de Conflictos Sociales</a></span>
   </div>
   <nav class="tabs">
@@ -201,9 +202,10 @@ footer{margin:40px 0 30px;font-size:12.5px;color:var(--muted)}
   <h2>Metodología y fuentes</h2>
   <div class="texto">
     <ol>
-      <li><b>Datos originales.</b> 140 Reportes Mensuales de Conflictos Sociales de la Defensoría del Pueblo, del N.° 131 (enero 2015) al N.° 270 (agosto 2026). De cada reporte se leyeron las fichas de los casos activos y la tabla de casos latentes: una fila por caso y por mes (27 903 filas).</li>
-      <li><b>Limpieza.</b> Se quitaron 585 fichas repetidas dentro de un mismo reporte, se limpió el texto del caso, el departamento se normalizó con el código de ubigeo del INEI y se marcaron como «Nacional / multirregional» los casos sin un solo departamento.</li>
-      <li><b>Actividad.</b> La Defensoría no publica la actividad como columna. Se clasificó cada caso socioambiental en minería, hidrocarburos, energía, residuos y saneamiento, agroindustria y forestal, u otros, buscando palabras clave en su descripción (empresas, «minera», «lote», «oleoducto», «hidroeléctrica», etc.).</li>
+      <li><b>Datos originales.</b> 141 Reportes Mensuales de Conflictos Sociales de la Defensoría del Pueblo, del N.° 131 (enero 2015) al N.° 271 (setiembre 2026). De cada reporte se leyeron las fichas de los casos activos y las tablas de casos sin hechos nuevos y latentes: una fila por caso y por mes (28 166 filas). De octubre 2024 en adelante los casos se volvieron a extraer, porque cambió el formato de las tablas.</li>
+      <li><b>Validación.</b> El número de casos de la base se comparó, mes a mes, con el total que declara cada reporte en su página de estadísticas: la diferencia mediana es 0 casos (gráfico «Lo que declara la Defensoría cada mes»).</li>
+      <li><b>Limpieza.</b> Se quitaron 4 fichas repetidas dentro de un mismo reporte, se limpió el texto del caso, el departamento se normalizó con el código de ubigeo del INEI y se marcaron como «Nacional / multirregional» los casos sin un solo departamento.</li>
+      <li><b>Actividad.</b> La Defensoría no publica la actividad como columna. Se clasificó cada caso socioambiental en minería, hidrocarburos, energía, residuos y saneamiento, agroindustria y forestal, u otros, buscando palabras clave en su descripción (empresas, «minera», «lote», «oleoducto», «hidroeléctrica», etc.). El resultado (62 % minería, 19 % hidrocarburos) es cercano al que publica la Defensoría (64 % y 19 % en promedio).</li>
       <li><b>Indicadores.</b> Casos registrados por mes = activos + latentes del reporte. Diálogo = casos activos con hechos en el mes marcados «hay diálogo» entre los que traen el dato.</li>
       <li><b>Herramientas.</b> Python (pandas) para limpiar y resumir; Plotly.js para este panel; código en el <a href="https://github.com/roddyhuarhua-hub/Data-Science-Python/tree/tarea-3/tarea_3" target="_blank" rel="noopener">repositorio</a>.</li>
     </ol>
@@ -215,10 +217,10 @@ footer{margin:40px 0 30px;font-size:12.5px;color:var(--muted)}
   <h2>Limitaciones</h2>
   <ul class="texto">
     <li>Un «caso registrado» es un conflicto que la Defensoría sigue ese mes; no mide intensidad, número de personas ni violencia.</li>
-    <li>Los datos se extrajeron de PDF de forma automática: el conteo mensual puede diferir en uno o dos casos del total que declara cada reporte, y en los latentes el texto del caso a veces se mezcla con el de la fila vecina.</li>
+    <li>Los datos se extrajeron de PDF de forma automática: en algunos meses el conteo difiere en 1 a 3 casos del total oficial (en marzo 2026, 13 casos, porque el propio reporte no cuadra). Desde octubre 2024 los casos sin hechos nuevos y los latentes solo traen un nombre corto y el departamento.</li>
     <li>La actividad se asignó por palabras clave; alrededor de 8 % de los casos socioambientales quedó como «Otros».</li>
     <li>Desde mediados de 2024 la Defensoría no informa el dato de diálogo para los casos activos sin hechos nuevos; por eso el indicador de diálogo usa solo casos con hechos en el mes.</li>
-    <li>No incluye casos resueltos o retirados, ni fallecidos y heridos.</li>
+    <li>Casos nuevos, resueltos, fallecidos y heridos vienen de los totales oficiales de cada reporte y abarcan todos los tipos de conflicto, no solo los socioambientales. Falta el reporte N.° 136 (junio 2015) en esa serie.</li>
   </ul>
 </section>
 
@@ -268,7 +270,7 @@ async function cargar(){
 function iniciarFiltros(){
   const anios = [...new Set(P.map(f=>f.anio))].sort();
   const d = document.getElementById("f-desde"), h = document.getElementById("f-hasta");
-  anios.forEach(a => { d.add(new Option(a,a)); h.add(new Option(a + (a===2026?" (ago)":""),a)); });
+  anios.forEach(a => { d.add(new Option(a,a)); h.add(new Option(a + (a===2026?" (set)":""),a)); });
   d.value = anios[0]; h.value = anios[anios.length-1];
   const act = document.getElementById("f-actividad");
   act.add(new Option("Todas","todas")); ACTIVIDADES.forEach(a=>act.add(new Option(a,a)));
@@ -522,9 +524,9 @@ function descargar(){
 
 // Hallazgos (cifras de datos/procesados/hallazgos.json)
 const HALLAZGOS = [
-  {t:"Seis de cada diez son mineros", p:"Los conflictos socioambientales son el 63 % de todos los casos que registra la Defensoría (2015–2026). Dentro de ellos, el 62 % está vinculado a la minería y el 19 % a los hidrocarburos."},
-  {t:"Cinco departamentos concentran la mitad", p:"Áncash, Loreto, Cusco, Puno y Cajamarca suman el 50 % de los registros socioambientales. Loreto concentra por sí solo el 61 % de los conflictos por hidrocarburos, ligados a los lotes petroleros y al Oleoducto Norperuano."},
-  {t:"Más diálogo, pero los conflictos persisten", p:"Entre los casos activos con hechos en el mes, los que tienen un proceso de diálogo pasaron de 59 % en 2015 a 89 % en 2023. Aun así, el número de conflictos socioambientales casi no bajó hasta 2023: el diálogo se volvió la norma, pero no siempre resuelve."}
+  {t:"Seis de cada diez conflictos socioambientales son mineros", p:"Los socioambientales son el 63 % de todos los casos que registró la Defensoría entre 2015 y 2026. Dentro de ellos, el 62 % está vinculado a la minería y el 19 % a los hidrocarburos (la propia Defensoría declara en promedio 64 % y 19 %)."},
+  {t:"Cinco departamentos concentran la mitad", p:"Loreto, Áncash, Cusco, Puno y Cajamarca suman el 50 % de los registros socioambientales. Loreto concentra el 61 % de los conflictos por hidrocarburos del país y casi todos sus conflictos socioambientales (93 %) son petroleros."},
+  {t:"Más diálogo, pocos casos resueltos", p:"Los casos socioambientales activos con un proceso de diálogo subieron de 59 % en 2015 a 80 % o más desde 2022. Pero entre 2015 y 2026 la Defensoría registró 597 casos nuevos y solo 242 resueltos: por cada conflicto que se cierra aparecen dos o tres nuevos."}
 ];
 document.getElementById("lista-hallazgos").innerHTML = HALLAZGOS.map((h,i)=>`<div class="hallazgo"><div class="num">Hallazgo ${i+1}</div><h3>${h.t}</h3><p>${h.p}</p></div>`).join("");
 
