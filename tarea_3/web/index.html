@@ -100,7 +100,7 @@ footer{margin:40px 0 30px;font-size:12.5px;color:var(--muted)}
     <span><b>Fuente:</b> <a href="https://www.defensoria.gob.pe/categorias_de_documentos/reportes-de-conflictos-sociales/" target="_blank" rel="noopener">Defensoría del Pueblo, Reportes Mensuales de Conflictos Sociales</a></span>
   </div>
   <nav class="tabs">
-    <a href="#panel">Panel</a><a href="#casos">Buscar casos</a><a href="#hallazgos">Hallazgos</a><a href="#metodologia">Metodología y fuentes</a><a href="#limitaciones">Limitaciones</a>
+    <a href="#panel">Panel</a><a href="#oficial">Cifras oficiales</a><a href="#casos">Buscar casos</a><a href="#hallazgos">Hallazgos</a><a href="#metodologia">Metodología y fuentes</a><a href="#limitaciones">Limitaciones</a>
   </nav>
 </header>
 
@@ -151,6 +151,29 @@ footer{margin:40px 0 30px;font-size:12.5px;color:var(--muted)}
       <h3>¿Cuántos casos activos están en diálogo?</h3>
       <p class="nota">Porcentaje de casos activos con hechos en el mes que la Defensoría marca como «hay diálogo», por año.</p>
       <div id="g-dialogo" class="plot"></div>
+    </div>
+  </div>
+</section>
+
+<section id="oficial">
+  <h2>Lo que declara la Defensoría cada mes</h2>
+  <p class="texto">Totales que publica cada reporte en su página de estadísticas (todos los tipos de conflicto). Sirven para validar la base por caso y para ver lo que la base no trae: casos nuevos, resueltos, fallecidos y heridos. Estos gráficos responden solo al filtro de años.</p>
+  <div class="grid">
+    <div class="card c12">
+      <h3>Conflictos registrados y socioambientales: cifra oficial frente a la base por caso</h3>
+      <p class="nota">Líneas continuas: cifra oficial del reporte. Puntos: casos contados en la base por caso. Si coinciden, la extracción es fiel.</p>
+      <div id="g-validacion" class="plot"></div>
+    </div>
+    <div class="card c6">
+      <h3>Casos nuevos y casos resueltos por año</h3>
+      <p class="nota">Suma de los casos que cada reporte declara como nuevos o resueltos en el mes.</p>
+      <div id="g-nuevos" class="plot"></div>
+    </div>
+    <div class="card c6">
+      <h3 style="display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap">Víctimas en conflictos sociales por año
+        <select id="f-victimas" aria-label="Indicador"><option value="heridos">Heridos</option><option value="fallecidos">Fallecidos</option></select></h3>
+      <p class="nota">Suma anual de lo que declara cada reporte, todos los tipos de conflicto.</p>
+      <div id="g-victimas" class="plot"></div>
     </div>
   </div>
 </section>
@@ -214,7 +237,7 @@ const pct = (x, d=0) => fmt(100*x, d) + " %";
 const MESES = ["ene","feb","mar","abr","may","jun","jul","ago","set","oct","nov","dic"];
 const nombreMes = p => MESES[+p.slice(5)-1] + " " + p.slice(0,4);
 
-let P, CASOS, GEO, estadoFiltro = {};
+let P, CASOS, GEO, OF, estadoFiltro = {};
 
 function grupoTipo(t){
   if (t === "Socioambiental" || t === "Asuntos de gobierno nacional" || t === "Comunal") return t;
@@ -223,10 +246,11 @@ function grupoTipo(t){
 }
 
 async function cargar(){
-  const [p, c, g] = await Promise.all([
+  const [p, c, g, o] = await Promise.all([
     fetch("data/panel.json").then(r=>r.json()),
     fetch("data/casos.json").then(r=>r.json()),
-    fetch("data/departamentos.geojson").then(r=>r.json())]);
+    fetch("data/departamentos.geojson").then(r=>r.json()),
+    fetch("data/oficial.json").then(r=>r.json())]);
   // Decodifica el formato columnar
   const filas = [];
   for (let i=0;i<p.n;i++){
@@ -236,7 +260,7 @@ async function cargar(){
     f.grupo = grupoTipo(f.tipo);
     filas.push(f);
   }
-  P = filas; CASOS = c; GEO = g;
+  P = filas; CASOS = c; GEO = g; OF = o;
   iniciarFiltros();
   actualizar();
 }
@@ -256,6 +280,7 @@ function iniciarFiltros(){
     actualizar();
   }));
   document.getElementById("buscar").addEventListener("input", dibujarTabla);
+  document.getElementById("f-victimas").addEventListener("change", ()=>dibujarOficial(leerFiltros()));
   document.getElementById("descargar").addEventListener("click", descargar);
 }
 
@@ -345,6 +370,7 @@ function actualizar(){
   dibujarRanking(porDep, nMeses, F);
   dibujarActividad(F);
   dibujarDialogo(filas, F);
+  dibujarOficial(F);
   dibujarTabla();
 }
 
@@ -428,6 +454,36 @@ function dibujarDialogo(filas, F){
     hovertemplate:"%{x}: <b>%{y:.0%}</b> en diálogo<extra></extra>"}],
     layoutBase({yaxis:{tickformat:".0%", range:[0,1], gridcolor:css("--grid"), zeroline:false},
       xaxis:{dtick:1, gridcolor:"rgba(0,0,0,0)", linecolor:css("--axis")}}), CONFIG);
+}
+
+function dibujarOficial(F){
+  const idx = OF.periodo.map((p,i)=>i).filter(i=>{const a=+OF.periodo[i].slice(0,4); return a>=F.desde && a<=F.hasta;});
+  const per = idx.map(i=>OF.periodo[i]+"-01"), etiqueta = idx.map(i=>nombreMes(OF.periodo[i]));
+  // Base por caso, sin filtros salvo años
+  const base = new Map(), baseSa = new Map();
+  for (const f of P){ if (f.anio<F.desde||f.anio>F.hasta) continue;
+    base.set(f.periodo,(base.get(f.periodo)||0)+f.casos);
+    if (f.tipo==="Socioambiental") baseSa.set(f.periodo,(baseSa.get(f.periodo)||0)+f.casos); }
+  const pb = [...base.keys()].sort();
+  Plotly.react("g-validacion",[
+    {type:"scatter",mode:"lines",name:"Registrados (oficial)",x:per,y:idx.map(i=>OF.registrados[i]),line:{color:css("--s1"),width:2},customdata:etiqueta,hovertemplate:"%{customdata}<br>Registrados oficial: <b>%{y}</b><extra></extra>"},
+    {type:"scatter",mode:"markers",name:"Registrados (base)",x:pb.map(p=>p+"-01"),y:pb.map(p=>base.get(p)),marker:{color:css("--s1"),size:5,opacity:.55},hovertemplate:"Base: %{y}<extra></extra>"},
+    {type:"scatter",mode:"lines",name:"Socioambientales (oficial)",x:per,y:idx.map(i=>OF.socioambientales[i]),line:{color:css("--s2"),width:2},customdata:etiqueta,hovertemplate:"%{customdata}<br>Socioambientales oficial: <b>%{y}</b><extra></extra>"},
+    {type:"scatter",mode:"markers",name:"Socioambientales (base)",x:pb.map(p=>p+"-01"),y:pb.map(p=>baseSa.get(p)||0),marker:{color:css("--s2"),size:5,opacity:.55},hovertemplate:"Base: %{y}<extra></extra>"}
+  ], layoutBase({xaxis:{type:"date",tickformat:"%Y",gridcolor:"rgba(0,0,0,0)",linecolor:css("--axis")},yaxis:{rangemode:"tozero",gridcolor:css("--grid"),zeroline:false,title:{text:"casos"}},hovermode:"x unified",legend:{orientation:"h",y:-0.22,x:0}}), CONFIG);
+
+  const anios=[]; for(let a=F.desde;a<=F.hasta;a++) anios.push(a);
+  const sumaAnio = campo => anios.map(a=>idx.filter(i=>+OF.periodo[i].slice(0,4)===a).reduce((s,i)=>s+(OF[campo][i]||0),0));
+  Plotly.react("g-nuevos",[
+    {type:"bar",name:"Nuevos",x:anios,y:sumaAnio("nuevos"),marker:{color:css("--s2")},hovertemplate:"%{x}: <b>%{y}</b> nuevos<extra></extra>"},
+    {type:"bar",name:"Resueltos",x:anios,y:sumaAnio("resueltos"),marker:{color:css("--s3")},hovertemplate:"%{x}: <b>%{y}</b> resueltos<extra></extra>"}
+  ], layoutBase({barmode:"group",bargap:.25,bargroupgap:.08,xaxis:{dtick:1,gridcolor:"rgba(0,0,0,0)",linecolor:css("--axis")},yaxis:{gridcolor:css("--grid"),zeroline:false}}), CONFIG);
+
+  const v = document.getElementById("f-victimas").value;
+  Plotly.react("g-victimas",[{type:"bar",x:anios,y:sumaAnio(v),marker:{color:css("--s5")},
+    text:sumaAnio(v).map(x=>fmt(x)),textposition:"outside",cliponaxis:false,
+    hovertemplate:"%{x}: <b>%{y}</b> "+v+"<extra></extra>"}],
+    layoutBase({xaxis:{dtick:1,gridcolor:"rgba(0,0,0,0)",linecolor:css("--axis")},yaxis:{gridcolor:css("--grid"),zeroline:false},margin:{l:44,r:10,t:16,b:36}}), CONFIG);
 }
 
 function casosFiltrados(){

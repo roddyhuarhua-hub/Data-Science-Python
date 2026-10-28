@@ -50,10 +50,14 @@ def main():
     # 2. Texto del caso limpio
     df["caso"] = df["caso"].map(limpiar_texto)
 
-    # 3. Duplicados exactos dentro del mismo reporte (la extracción a veces repite la ficha)
-    clave = ["reporte_n", "estado", "caso", "ubicacion"]
-    duplicados = df.duplicated(clave).sum()
-    df = df.drop_duplicates(clave)
+    # 3. Duplicados exactos dentro del mismo reporte (la extracción a veces repite la ficha).
+    #    Solo cuentan como duplicado las filas con una descripción real del caso: desde 2024
+    #    muchos activos "sin hechos" traen solo el tipo ("Socioambiental") como texto, y
+    #    esas filas son casos distintos aunque el texto coincida.
+    clave = ["reporte_n", "estado", "caso", "ubicacion", "departamento", "ubigeo"]
+    repetida = df.duplicated(clave) & (df["caso"].str.len() >= 40)
+    duplicados = int(repetida.sum())
+    df = df[~repetida]
 
     # 4. Departamento normalizado a partir del ubigeo (el texto original viene en
     #    mayúsculas/minúsculas mezcladas y a veces pegado con otras palabras)

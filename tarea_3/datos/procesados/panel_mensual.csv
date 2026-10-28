@@ -16179,8 +16179,9 @@ periodo,anio,mes,cod_dep,dep,tipo,actividad,estado,con_hechos,dialogo,casos
 2024-10,2024,10,,Nacional / multirregional,Asuntos de gobierno nacional,,latente,False,na,1
 2024-10,2024,10,,Nacional / multirregional,Comunal,,latente,False,na,1
 2024-10,2024,10,,Nacional / multirregional,Demarcación territorial,,latente,False,na,1
+2024-10,2024,10,,Nacional / multirregional,Sin tipo,,activo,False,sd,6
 2024-10,2024,10,,Nacional / multirregional,Socioambiental,Hidrocarburos,latente,False,na,1
-2024-10,2024,10,,Sin ubicación,Sin tipo,,activo,False,sd,1
+2024-10,2024,10,,Sin ubicación,Sin tipo,,activo,False,sd,6
 2024-10,2024,10,,Sin ubicación,Socioambiental,Minería,activo,True,si,1
 2024-10,2024,10,,Sin ubicación,Socioambiental,Minería,latente,False,na,1
 2024-10,2024,10,,Sin ubicación,Socioambiental,Residuos y saneamiento,activo,True,no,1
@@ -16206,23 +16207,26 @@ periodo,anio,mes,cod_dep,dep,tipo,actividad,estado,con_hechos,dialogo,casos
 2024-10,2024,10,04,Arequipa,Socioambiental,Minería,activo,True,no,1
 2024-10,2024,10,04,Arequipa,Socioambiental,Minería,latente,False,na,1
 2024-10,2024,10,05,Ayacucho,Comunal,,activo,True,no,1
-2024-10,2024,10,05,Ayacucho,Sin tipo,,activo,False,sd,2
+2024-10,2024,10,05,Ayacucho,Sin tipo,,activo,False,sd,7
 2024-10,2024,10,05,Ayacucho,Socioambiental,Hidrocarburos,activo,True,si,1
 2024-10,2024,10,05,Ayacucho,Socioambiental,Minería,activo,True,si,1
 2024-10,2024,10,05,Ayacucho,Socioambiental,Minería,latente,False,na,1
 2024-10,2024,10,06,Cajamarca,Asuntos de gobierno local,,latente,False,na,1
 2024-10,2024,10,06,Cajamarca,Otros asuntos,,activo,True,no,1
+2024-10,2024,10,06,Cajamarca,Sin tipo,,activo,False,sd,3
 2024-10,2024,10,07,Callao,Asuntos de gobierno nacional,,activo,True,no,1
 2024-10,2024,10,08,Cusco,Asuntos de gobierno nacional,,activo,True,no,1
 2024-10,2024,10,08,Cusco,Asuntos de gobierno regional,,activo,True,sd,1
 2024-10,2024,10,08,Cusco,Comunal,,latente,False,na,2
 2024-10,2024,10,08,Cusco,Demarcación territorial,,latente,False,na,1
+2024-10,2024,10,08,Cusco,Sin tipo,,activo,False,sd,11
 2024-10,2024,10,08,Cusco,Socioambiental,Minería,activo,True,si,3
 2024-10,2024,10,08,Cusco,Socioambiental,Minería,latente,False,na,3
 2024-10,2024,10,09,Huancavelica,Comunal,,latente,False,na,1
+2024-10,2024,10,09,Huancavelica,Sin tipo,,activo,False,sd,3
 2024-10,2024,10,10,Huánuco,Asuntos de gobierno regional,,activo,True,si,1
 2024-10,2024,10,10,Huánuco,Comunal,,activo,True,no,1
-2024-10,2024,10,10,Huánuco,Sin tipo,,activo,False,sd,1
+2024-10,2024,10,10,Huánuco,Sin tipo,,activo,False,sd,2
 2024-10,2024,10,10,Huánuco,Socioambiental,Minería,activo,True,si,3
 2024-10,2024,10,10,Huánuco,Socioambiental,Residuos y saneamiento,activo,True,no,1
 2024-10,2024,10,11,Ica,Asuntos de gobierno nacional,,latente,False,na,1
@@ -16230,10 +16234,13 @@ periodo,anio,mes,cod_dep,dep,tipo,actividad,estado,con_hechos,dialogo,casos
 2024-10,2024,10,12,Junín,Asuntos de gobierno regional,,latente,False,na,1
 2024-10,2024,10,12,Junín,Comunal,,activo,True,no,1
 2024-10,2024,10,12,Junín,Comunal,,latente,False,na,1
+2024-10,2024,10,12,Junín,Sin tipo,,activo,False,sd,1
 2024-10,2024,10,12,Junín,Socioambiental,Minería,activo,True,si,1
 2024-10,2024,10,12,Junín,Socioambiental,Residuos y saneamiento,latente,False,na,1
+2024-10,2024,10,13,La Libertad,Sin tipo,,activo,False,sd,2
 2024-10,2024,10,14,Lambayeque,Asuntos de gobierno local,,latente,False,na,1
 2024-10,2024,10,14,Lambayeque,Laboral,,latente,False,na,1
+2024-10,2024,10,14,Lambayeque,Sin tipo,,activo,False,sd,1
 2024-10,2024,10,15,Lima,Asuntos de gobierno local,,activo,True,no,1
 2024-10,2024,10,15,Lima,Asuntos de gobierno nacional,,activo,True,no,1
 2024-10,2024,10,15,Lima,Asuntos de gobierno nacional,,activo,True,sd,1
@@ -16241,28 +16248,35 @@ periodo,anio,mes,cod_dep,dep,tipo,actividad,estado,con_hechos,dialogo,casos
 2024-10,2024,10,15,Lima,Asuntos de gobierno nacional,,latente,False,na,1
 2024-10,2024,10,15,Lima,Comunal,,activo,True,no,1
 2024-10,2024,10,15,Lima,Demarcación territorial,,activo,True,no,1
-2024-10,2024,10,15,Lima,Sin tipo,,activo,False,sd,1
+2024-10,2024,10,15,Lima,Sin tipo,,activo,False,sd,3
 2024-10,2024,10,16,Loreto,Asuntos de gobierno local,,activo,True,no,1
 2024-10,2024,10,16,Loreto,Asuntos de gobierno nacional,,latente,False,na,1
+2024-10,2024,10,16,Loreto,Sin tipo,,activo,False,sd,16
 2024-10,2024,10,16,Loreto,Socioambiental,Hidrocarburos,activo,True,no,2
 2024-10,2024,10,16,Loreto,Socioambiental,Hidrocarburos,activo,True,si,2
 2024-10,2024,10,16,Loreto,Socioambiental,Hidrocarburos,latente,False,na,8
+2024-10,2024,10,17,Madre de Dios,Sin tipo,,activo,False,sd,1
 2024-10,2024,10,18,Moquegua,Socioambiental,Minería,activo,True,si,2
+2024-10,2024,10,19,Pasco,Sin tipo,,activo,False,sd,3
 2024-10,2024,10,19,Pasco,Socioambiental,Minería,activo,True,si,1
 2024-10,2024,10,20,Piura,Asuntos de gobierno local,,latente,False,na,1
 2024-10,2024,10,20,Piura,Asuntos de gobierno regional,,latente,False,na,1
+2024-10,2024,10,20,Piura,Sin tipo,,activo,False,sd,9
 2024-10,2024,10,21,Puno,Asuntos de gobierno local,,activo,True,sd,1
 2024-10,2024,10,21,Puno,Asuntos de gobierno local,,latente,False,na,1
 2024-10,2024,10,21,Puno,Comunal,,activo,True,no,1
 2024-10,2024,10,21,Puno,Demarcación territorial,,activo,True,no,1
 2024-10,2024,10,21,Puno,Otros asuntos,,latente,False,na,1
-2024-10,2024,10,21,Puno,Sin tipo,,activo,False,sd,2
+2024-10,2024,10,21,Puno,Sin tipo,,activo,False,sd,7
 2024-10,2024,10,21,Puno,Socioambiental,Minería,activo,True,si,4
 2024-10,2024,10,21,Puno,Socioambiental,Residuos y saneamiento,activo,True,no,1
 2024-10,2024,10,21,Puno,Socioambiental,Residuos y saneamiento,activo,True,si,1
 2024-10,2024,10,22,San Martín,Asuntos de gobierno nacional,,activo,True,no,1
 2024-10,2024,10,22,San Martín,Comunal,,activo,True,si,1
+2024-10,2024,10,22,San Martín,Sin tipo,,activo,False,sd,6
+2024-10,2024,10,24,Tumbes,Sin tipo,,activo,False,sd,1
 2024-10,2024,10,25,Ucayali,Asuntos de gobierno local,,activo,True,sd,1
+2024-10,2024,10,25,Ucayali,Sin tipo,,activo,False,sd,1
 2024-11,2024,11,,Nacional / multirregional,Asuntos de gobierno nacional,,activo,False,sd,2
 2024-11,2024,11,,Nacional / multirregional,Asuntos de gobierno nacional,,latente,False,na,1
 2024-11,2024,11,,Nacional / multirregional,Asuntos de gobierno regional,,activo,False,sd,1
@@ -16393,8 +16407,10 @@ periodo,anio,mes,cod_dep,dep,tipo,actividad,estado,con_hechos,dialogo,casos
 2024-12,2024,12,,Nacional / multirregional,Asuntos de gobierno nacional,,latente,False,na,1
 2024-12,2024,12,,Nacional / multirregional,Comunal,,latente,False,na,1
 2024-12,2024,12,,Nacional / multirregional,Demarcación territorial,,latente,False,na,1
+2024-12,2024,12,,Nacional / multirregional,Sin tipo,,activo,False,sd,4
 2024-12,2024,12,,Nacional / multirregional,Socioambiental,Hidrocarburos,latente,False,na,1
 2024-12,2024,12,,Sin ubicación,Asuntos de gobierno regional,,activo,False,sd,1
+2024-12,2024,12,,Sin ubicación,Sin tipo,,activo,False,sd,2
 2024-12,2024,12,,Sin ubicación,Socioambiental,Minería,activo,True,si,1
 2024-12,2024,12,,Sin ubicación,Socioambiental,Minería,latente,False,na,1
 2024-12,2024,12,,Sin ubicación,Socioambiental,Residuos y saneamiento,activo,True,no,1
@@ -16433,7 +16449,7 @@ periodo,anio,mes,cod_dep,dep,tipo,actividad,estado,con_hechos,dialogo,casos
 2024-12,2024,12,07,Callao,Socioambiental,Hidrocarburos,activo,True,si,1
 2024-12,2024,12,08,Cusco,Comunal,,activo,False,sd,1
 2024-12,2024,12,08,Cusco,Otros asuntos,,activo,False,sd,1
-2024-12,2024,12,08,Cusco,Sin tipo,,activo,False,sd,3
+2024-12,2024,12,08,Cusco,Sin tipo,,activo,False,sd,6
 2024-12,2024,12,08,Cusco,Socioambiental,Hidrocarburos,activo,False,sd,1
 2024-12,2024,12,08,Cusco,Socioambiental,Minería,activo,False,sd,5
 2024-12,2024,12,08,Cusco,Socioambiental,Minería,activo,True,si,1
@@ -16441,32 +16457,37 @@ periodo,anio,mes,cod_dep,dep,tipo,actividad,estado,con_hechos,dialogo,casos
 2024-12,2024,12,08,Cusco,Socioambiental,Residuos y saneamiento,latente,False,na,1
 2024-12,2024,12,09,Huancavelica,Asuntos de gobierno nacional,,activo,True,no,1
 2024-12,2024,12,09,Huancavelica,Comunal,,latente,False,na,2
-2024-12,2024,12,09,Huancavelica,Sin tipo,,activo,False,sd,1
+2024-12,2024,12,09,Huancavelica,Sin tipo,,activo,False,sd,2
 2024-12,2024,12,10,Huánuco,Asuntos de gobierno regional,,latente,False,na,1
-2024-12,2024,12,10,Huánuco,Sin tipo,,activo,False,sd,1
+2024-12,2024,12,10,Huánuco,Sin tipo,,activo,False,sd,4
 2024-12,2024,12,10,Huánuco,Socioambiental,Minería,activo,True,si,2
 2024-12,2024,12,10,Huánuco,Socioambiental,Residuos y saneamiento,activo,True,no,1
 2024-12,2024,12,12,Junín,Asuntos de gobierno regional,,activo,True,si,1
 2024-12,2024,12,12,Junín,Asuntos de gobierno regional,,latente,False,na,1
 2024-12,2024,12,12,Junín,Comunal,,activo,True,no,1
 2024-12,2024,12,12,Junín,Comunal,,latente,False,na,1
+2024-12,2024,12,12,Junín,Sin tipo,,activo,False,sd,1
 2024-12,2024,12,12,Junín,Socioambiental,Minería,activo,True,si,1
 2024-12,2024,12,12,Junín,Socioambiental,Residuos y saneamiento,latente,False,na,1
+2024-12,2024,12,13,La Libertad,Sin tipo,,activo,False,sd,2
 2024-12,2024,12,14,Lambayeque,Asuntos de gobierno local,,latente,False,na,1
 2024-12,2024,12,14,Lambayeque,Laboral,,latente,False,na,1
+2024-12,2024,12,14,Lambayeque,Sin tipo,,activo,False,sd,1
 2024-12,2024,12,15,Lima,Asuntos de gobierno local,,activo,True,no,1
 2024-12,2024,12,15,Lima,Asuntos de gobierno nacional,,activo,True,no,2
 2024-12,2024,12,15,Lima,Asuntos de gobierno nacional,,latente,False,na,1
 2024-12,2024,12,15,Lima,Laboral,,activo,True,sd,1
-2024-12,2024,12,15,Lima,Sin tipo,,activo,False,sd,2
+2024-12,2024,12,15,Lima,Sin tipo,,activo,False,sd,5
 2024-12,2024,12,15,Lima,Socioambiental,Minería,activo,True,si,1
 2024-12,2024,12,16,Loreto,Asuntos de gobierno local,,activo,True,no,1
 2024-12,2024,12,16,Loreto,Asuntos de gobierno nacional,,latente,False,na,1
+2024-12,2024,12,16,Loreto,Sin tipo,,activo,False,sd,16
 2024-12,2024,12,16,Loreto,Socioambiental,Hidrocarburos,activo,True,no,1
 2024-12,2024,12,16,Loreto,Socioambiental,Hidrocarburos,activo,True,si,3
 2024-12,2024,12,16,Loreto,Socioambiental,Hidrocarburos,latente,False,na,8
 2024-12,2024,12,17,Madre de Dios,Socioambiental,Minería,latente,False,na,1
 2024-12,2024,12,18,Moquegua,Socioambiental,Minería,activo,True,si,3
+2024-12,2024,12,19,Pasco,Sin tipo,,activo,False,sd,1
 2024-12,2024,12,19,Pasco,Socioambiental,Minería,latente,False,na,1
 2024-12,2024,12,19,Pasco,Socioambiental,Otros,activo,True,si,1
 2024-12,2024,12,20,Piura,Asuntos de gobierno local,,activo,True,si,1
@@ -16474,6 +16495,7 @@ periodo,anio,mes,cod_dep,dep,tipo,actividad,estado,con_hechos,dialogo,casos
 2024-12,2024,12,20,Piura,Asuntos de gobierno regional,,activo,True,no,1
 2024-12,2024,12,20,Piura,Asuntos de gobierno regional,,activo,True,si,1
 2024-12,2024,12,20,Piura,Asuntos de gobierno regional,,latente,False,na,1
+2024-12,2024,12,20,Piura,Sin tipo,,activo,False,sd,3
 2024-12,2024,12,20,Piura,Socioambiental,Hidrocarburos,activo,True,si,2
 2024-12,2024,12,20,Piura,Socioambiental,Minería,activo,True,no,1
 2024-12,2024,12,21,Puno,Asuntos de gobierno local,,activo,True,si,1
@@ -16499,9 +16521,10 @@ periodo,anio,mes,cod_dep,dep,tipo,actividad,estado,con_hechos,dialogo,casos
 2025-01,2025,1,,Nacional / multirregional,Asuntos de gobierno nacional,,latente,False,na,2
 2025-01,2025,1,,Nacional / multirregional,Comunal,,latente,False,na,1
 2025-01,2025,1,,Nacional / multirregional,Demarcación territorial,,latente,False,na,1
+2025-01,2025,1,,Nacional / multirregional,Sin tipo,,activo,False,sd,4
 2025-01,2025,1,,Nacional / multirregional,Socioambiental,Hidrocarburos,activo,True,si,1
 2025-01,2025,1,,Nacional / multirregional,Socioambiental,Hidrocarburos,latente,False,na,1
-2025-01,2025,1,,Sin ubicación,Sin tipo,,activo,False,sd,3
+2025-01,2025,1,,Sin ubicación,Sin tipo,,activo,False,sd,5
 2025-01,2025,1,,Sin ubicación,Socioambiental,Minería,activo,True,si,1
 2025-01,2025,1,,Sin ubicación,Socioambiental,Minería,latente,False,na,1
 2025-01,2025,1,,Sin ubicación,Socioambiental,Residuos y saneamiento,activo,True,no,1
@@ -16539,16 +16562,17 @@ periodo,anio,mes,cod_dep,dep,tipo,actividad,estado,con_hechos,dialogo,casos
 2025-01,2025,1,06,Cajamarca,Socioambiental,Minería,activo,True,no,1
 2025-01,2025,1,07,Callao,Asuntos de gobierno nacional,,activo,True,no,1
 2025-01,2025,1,08,Cusco,Asuntos de gobierno nacional,,activo,True,no,1
-2025-01,2025,1,08,Cusco,Sin tipo,,activo,False,sd,2
+2025-01,2025,1,08,Cusco,Sin tipo,,activo,False,sd,10
 2025-01,2025,1,08,Cusco,Socioambiental,Hidrocarburos,activo,True,si,1
 2025-01,2025,1,08,Cusco,Socioambiental,Minería,activo,False,sd,2
 2025-01,2025,1,08,Cusco,Socioambiental,Minería,activo,True,si,1
 2025-01,2025,1,08,Cusco,Socioambiental,Minería,latente,False,na,1
 2025-01,2025,1,08,Cusco,Socioambiental,Residuos y saneamiento,latente,False,na,1
 2025-01,2025,1,09,Huancavelica,Asuntos de gobierno nacional,,activo,True,sd,1
+2025-01,2025,1,09,Huancavelica,Sin tipo,,activo,False,sd,2
 2025-01,2025,1,10,Huánuco,Asuntos de gobierno regional,,latente,False,na,1
 2025-01,2025,1,10,Huánuco,Comunal,,activo,True,no,1
-2025-01,2025,1,10,Huánuco,Sin tipo,,activo,False,sd,1
+2025-01,2025,1,10,Huánuco,Sin tipo,,activo,False,sd,5
 2025-01,2025,1,12,Junín,Asuntos de gobierno regional,,activo,True,no,1
 2025-01,2025,1,12,Junín,Asuntos de gobierno regional,,latente,False,na,1
 2025-01,2025,1,12,Junín,Comunal,,activo,True,no,1
@@ -16558,6 +16582,7 @@ periodo,anio,mes,cod_dep,dep,tipo,actividad,estado,con_hechos,dialogo,casos
 2025-01,2025,1,13,La Libertad,Socioambiental,Agroindustria y forestal,activo,True,si,1
 2025-01,2025,1,14,Lambayeque,Asuntos de gobierno local,,latente,False,na,1
 2025-01,2025,1,14,Lambayeque,Laboral,,latente,False,na,1
+2025-01,2025,1,14,Lambayeque,Sin tipo,,activo,False,sd,1
 2025-01,2025,1,15,Lima,Asuntos de gobierno local,,activo,True,no,1
 2025-01,2025,1,15,Lima,Asuntos de gobierno local,,activo,True,si,1
 2025-01,2025,1,15,Lima,Asuntos de gobierno nacional,,activo,True,no,1
@@ -16572,18 +16597,21 @@ periodo,anio,mes,cod_dep,dep,tipo,actividad,estado,con_hechos,dialogo,casos
 2025-01,2025,1,16,Loreto,Asuntos de gobierno nacional,,latente,False,na,1
 2025-01,2025,1,16,Loreto,Comunal,,activo,True,sd,1
 2025-01,2025,1,16,Loreto,Laboral,,activo,True,no,1
+2025-01,2025,1,16,Loreto,Sin tipo,,activo,False,sd,14
 2025-01,2025,1,16,Loreto,Socioambiental,Hidrocarburos,activo,True,no,2
 2025-01,2025,1,16,Loreto,Socioambiental,Hidrocarburos,activo,True,si,3
 2025-01,2025,1,16,Loreto,Socioambiental,Hidrocarburos,latente,False,na,8
 2025-01,2025,1,17,Madre de Dios,Socioambiental,Minería,latente,False,na,1
 2025-01,2025,1,18,Moquegua,Socioambiental,Hidrocarburos,activo,True,si,1
 2025-01,2025,1,18,Moquegua,Socioambiental,Minería,activo,True,si,2
+2025-01,2025,1,19,Pasco,Sin tipo,,activo,False,sd,1
 2025-01,2025,1,19,Pasco,Socioambiental,Minería,latente,False,na,1
 2025-01,2025,1,19,Pasco,Socioambiental,Otros,activo,True,si,1
 2025-01,2025,1,20,Piura,Asuntos de gobierno local,,latente,False,na,1
 2025-01,2025,1,20,Piura,Asuntos de gobierno regional,,activo,True,no,1
 2025-01,2025,1,20,Piura,Asuntos de gobierno regional,,activo,True,si,1
 2025-01,2025,1,20,Piura,Asuntos de gobierno regional,,latente,False,na,1
+2025-01,2025,1,20,Piura,Sin tipo,,activo,False,sd,3
 2025-01,2025,1,20,Piura,Socioambiental,Hidrocarburos,activo,True,si,2
 2025-01,2025,1,20,Piura,Socioambiental,Minería,activo,True,no,1
 2025-01,2025,1,21,Puno,Asuntos de gobierno local,,activo,True,si,1
@@ -16613,8 +16641,9 @@ periodo,anio,mes,cod_dep,dep,tipo,actividad,estado,con_hechos,dialogo,casos
 2025-02,2025,2,,Nacional / multirregional,Asuntos de gobierno nacional,,latente,False,na,2
 2025-02,2025,2,,Nacional / multirregional,Comunal,,latente,False,na,1
 2025-02,2025,2,,Nacional / multirregional,Demarcación territorial,,latente,False,na,1
+2025-02,2025,2,,Nacional / multirregional,Sin tipo,,activo,False,sd,6
 2025-02,2025,2,,Nacional / multirregional,Socioambiental,Hidrocarburos,latente,False,na,1
-2025-02,2025,2,,Sin ubicación,Sin tipo,,activo,False,sd,2
+2025-02,2025,2,,Sin ubicación,Sin tipo,,activo,False,sd,12
 2025-02,2025,2,,Sin ubicación,Socioambiental,Minería,activo,True,si,1
 2025-02,2025,2,,Sin ubicación,Socioambiental,Minería,latente,False,na,1
 2025-02,2025,2,,Sin ubicación,Socioambiental,Residuos y saneamiento,activo,True,no,1
@@ -16639,12 +16668,13 @@ periodo,anio,mes,cod_dep,dep,tipo,actividad,estado,con_hechos,dialogo,casos
 2025-02,2025,2,03,Apurímac,Socioambiental,Minería,activo,True,si,1
 2025-02,2025,2,04,Arequipa,Asuntos de gobierno nacional,,latente,False,na,1
 2025-02,2025,2,04,Arequipa,Socioambiental,Minería,activo,True,no,1
-2025-02,2025,2,05,Ayacucho,Sin tipo,,activo,False,sd,3
+2025-02,2025,2,05,Ayacucho,Sin tipo,,activo,False,sd,7
 2025-02,2025,2,05,Ayacucho,Socioambiental,Minería,activo,True,si,1
 2025-02,2025,2,05,Ayacucho,Socioambiental,Minería,latente,False,na,1
 2025-02,2025,2,06,Cajamarca,Asuntos de gobierno local,,latente,False,na,1
+2025-02,2025,2,06,Cajamarca,Sin tipo,,activo,False,sd,3
 2025-02,2025,2,08,Cusco,Asuntos de gobierno nacional,,activo,True,no,1
-2025-02,2025,2,08,Cusco,Sin tipo,,activo,False,sd,1
+2025-02,2025,2,08,Cusco,Sin tipo,,activo,False,sd,13
 2025-02,2025,2,08,Cusco,Socioambiental,Minería,activo,True,si,1
 2025-02,2025,2,08,Cusco,Socioambiental,Minería,latente,False,na,1
 2025-02,2025,2,08,Cusco,Socioambiental,Residuos y saneamiento,latente,False,na,1
@@ -16653,31 +16683,35 @@ periodo,anio,mes,cod_dep,dep,tipo,actividad,estado,con_hechos,dialogo,casos
 2025-02,2025,2,10,Huánuco,Asuntos de gobierno regional,,activo,True,si,2
 2025-02,2025,2,10,Huánuco,Asuntos de gobierno regional,,latente,False,na,1
 2025-02,2025,2,10,Huánuco,Comunal,,activo,True,no,1
-2025-02,2025,2,10,Huánuco,Sin tipo,,activo,False,sd,1
+2025-02,2025,2,10,Huánuco,Sin tipo,,activo,False,sd,2
 2025-02,2025,2,10,Huánuco,Socioambiental,Minería,activo,True,si,2
 2025-02,2025,2,12,Junín,Asuntos de gobierno regional,,activo,True,no,1
 2025-02,2025,2,12,Junín,Asuntos de gobierno regional,,latente,False,na,1
 2025-02,2025,2,12,Junín,Comunal,,latente,False,na,1
+2025-02,2025,2,12,Junín,Sin tipo,,activo,False,sd,2
 2025-02,2025,2,12,Junín,Socioambiental,Minería,activo,True,si,1
 2025-02,2025,2,14,Lambayeque,Asuntos de gobierno local,,latente,False,na,1
 2025-02,2025,2,14,Lambayeque,Laboral,,latente,False,na,1
 2025-02,2025,2,15,Lima,Asuntos de gobierno local,,activo,True,si,1
 2025-02,2025,2,15,Lima,Asuntos de gobierno nacional,,latente,False,na,1
-2025-02,2025,2,15,Lima,Sin tipo,,activo,False,sd,2
+2025-02,2025,2,15,Lima,Sin tipo,,activo,False,sd,7
 2025-02,2025,2,15,Lima,Socioambiental,Minería,activo,True,si,1
 2025-02,2025,2,16,Loreto,Asuntos de gobierno nacional,,activo,True,si,1
 2025-02,2025,2,16,Loreto,Asuntos de gobierno nacional,,latente,False,na,1
 2025-02,2025,2,16,Loreto,Asuntos de gobierno regional,,activo,True,no,1
 2025-02,2025,2,16,Loreto,Comunal,,activo,True,si,1
+2025-02,2025,2,16,Loreto,Sin tipo,,activo,False,sd,15
 2025-02,2025,2,16,Loreto,Socioambiental,Hidrocarburos,activo,True,no,2
 2025-02,2025,2,16,Loreto,Socioambiental,Hidrocarburos,activo,True,si,3
 2025-02,2025,2,16,Loreto,Socioambiental,Hidrocarburos,latente,False,na,5
 2025-02,2025,2,17,Madre de Dios,Socioambiental,Minería,latente,False,na,1
 2025-02,2025,2,18,Moquegua,Socioambiental,Hidrocarburos,activo,True,si,1
+2025-02,2025,2,19,Pasco,Sin tipo,,activo,False,sd,1
 2025-02,2025,2,19,Pasco,Socioambiental,Otros,activo,True,si,1
 2025-02,2025,2,20,Piura,Asuntos de gobierno local,,activo,True,si,1
 2025-02,2025,2,20,Piura,Asuntos de gobierno local,,latente,False,na,1
 2025-02,2025,2,20,Piura,Asuntos de gobierno regional,,activo,True,si,2
+2025-02,2025,2,20,Piura,Sin tipo,,activo,False,sd,4
 2025-02,2025,2,20,Piura,Socioambiental,Hidrocarburos,activo,True,si,2
 2025-02,2025,2,20,Piura,Socioambiental,Minería,activo,True,no,1
 2025-02,2025,2,21,Puno,Asuntos de gobierno local,,activo,True,si,1
@@ -16685,12 +16719,15 @@ periodo,anio,mes,cod_dep,dep,tipo,actividad,estado,con_hechos,dialogo,casos
 2025-02,2025,2,21,Puno,Asuntos de gobierno regional,,activo,True,no,1
 2025-02,2025,2,21,Puno,Comunal,,activo,True,no,1
 2025-02,2025,2,21,Puno,Otros asuntos,,latente,False,na,1
-2025-02,2025,2,21,Puno,Sin tipo,,activo,False,sd,1
+2025-02,2025,2,21,Puno,Sin tipo,,activo,False,sd,7
 2025-02,2025,2,21,Puno,Socioambiental,Minería,activo,True,si,3
 2025-02,2025,2,21,Puno,Socioambiental,Residuos y saneamiento,activo,True,si,2
 2025-02,2025,2,22,San Martín,Asuntos de gobierno local,,latente,False,na,1
 2025-02,2025,2,22,San Martín,Comunal,,latente,False,na,2
+2025-02,2025,2,22,San Martín,Sin tipo,,activo,False,sd,3
 2025-02,2025,2,22,San Martín,Socioambiental,Otros,latente,False,na,1
+2025-02,2025,2,24,Tumbes,Sin tipo,,activo,False,sd,1
+2025-02,2025,2,25,Ucayali,Sin tipo,,activo,False,sd,2
 2025-03,2025,3,,Nacional / multirregional,Asuntos de gobierno nacional,,activo,False,sd,2
 2025-03,2025,3,,Nacional / multirregional,Asuntos de gobierno nacional,,activo,True,si,1
 2025-03,2025,3,,Nacional / multirregional,Asuntos de gobierno nacional,,latente,False,na,2
@@ -16823,9 +16860,10 @@ periodo,anio,mes,cod_dep,dep,tipo,actividad,estado,con_hechos,dialogo,casos
 2025-04,2025,4,,Nacional / multirregional,Asuntos de gobierno nacional,,latente,False,na,2
 2025-04,2025,4,,Nacional / multirregional,Comunal,,latente,False,na,1
 2025-04,2025,4,,Nacional / multirregional,Demarcación territorial,,latente,False,na,1
+2025-04,2025,4,,Nacional / multirregional,Sin tipo,,activo,False,sd,4
 2025-04,2025,4,,Nacional / multirregional,Sin tipo,,activo,True,sd,1
 2025-04,2025,4,,Nacional / multirregional,Socioambiental,Hidrocarburos,latente,False,na,1
-2025-04,2025,4,,Sin ubicación,Sin tipo,,activo,False,sd,1
+2025-04,2025,4,,Sin ubicación,Sin tipo,,activo,False,sd,6
 2025-04,2025,4,,Sin ubicación,Socioambiental,Minería,activo,True,si,1
 2025-04,2025,4,,Sin ubicación,Socioambiental,Minería,latente,False,na,1
 2025-04,2025,4,,Sin ubicación,Socioambiental,Residuos y saneamiento,activo,True,si,1
@@ -16861,7 +16899,7 @@ periodo,anio,mes,cod_dep,dep,tipo,actividad,estado,con_hechos,dialogo,casos
 2025-04,2025,4,06,Cajamarca,Socioambiental,Minería,activo,False,sd,3
 2025-04,2025,4,07,Callao,Asuntos de gobierno nacional,,activo,True,si,1
 2025-04,2025,4,08,Cusco,Otros asuntos,,activo,False,sd,1
-2025-04,2025,4,08,Cusco,Sin tipo,,activo,False,sd,2
+2025-04,2025,4,08,Cusco,Sin tipo,,activo,False,sd,7
 2025-04,2025,4,08,Cusco,Socioambiental,Hidrocarburos,activo,False,sd,1
 2025-04,2025,4,08,Cusco,Socioambiental,Minería,activo,False,sd,4
 2025-04,2025,4,08,Cusco,Socioambiental,Minería,activo,True,si,2
@@ -16870,7 +16908,7 @@ periodo,anio,mes,cod_dep,dep,tipo,actividad,estado,con_hechos,dialogo,casos
 2025-04,2025,4,09,Huancavelica,Socioambiental,Minería,latente,False,na,2
 2025-04,2025,4,10,Huánuco,Asuntos de gobierno regional,,activo,True,si,1
 2025-04,2025,4,10,Huánuco,Asuntos de gobierno regional,,latente,False,na,1
-2025-04,2025,4,10,Huánuco,Sin tipo,,activo,False,sd,2
+2025-04,2025,4,10,Huánuco,Sin tipo,,activo,False,sd,3
 2025-04,2025,4,10,Huánuco,Socioambiental,Minería,activo,True,si,3
 2025-04,2025,4,12,Junín,Asuntos de gobierno regional,,activo,True,no,1
 2025-04,2025,4,12,Junín,Asuntos de gobierno regional,,latente,False,na,1
@@ -16881,15 +16919,17 @@ periodo,anio,mes,cod_dep,dep,tipo,actividad,estado,con_hechos,dialogo,casos
 2025-04,2025,4,13,La Libertad,Socioambiental,Minería,latente,False,na,1
 2025-04,2025,4,14,Lambayeque,Asuntos de gobierno local,,latente,False,na,1
 2025-04,2025,4,14,Lambayeque,Laboral,,latente,False,na,1
+2025-04,2025,4,14,Lambayeque,Sin tipo,,activo,False,sd,1
 2025-04,2025,4,15,Lima,Asuntos de gobierno nacional,,latente,False,na,1
 2025-04,2025,4,15,Lima,Demarcación territorial,,activo,True,no,1
 2025-04,2025,4,15,Lima,Laboral,,latente,False,na,1
-2025-04,2025,4,15,Lima,Sin tipo,,activo,False,sd,1
+2025-04,2025,4,15,Lima,Sin tipo,,activo,False,sd,4
 2025-04,2025,4,15,Lima,Socioambiental,Minería,activo,True,si,2
 2025-04,2025,4,15,Lima,Socioambiental,Minería,latente,False,na,1
 2025-04,2025,4,15,Lima,Socioambiental,Otros,activo,True,si,1
 2025-04,2025,4,16,Loreto,Asuntos de gobierno nacional,,latente,False,na,1
 2025-04,2025,4,16,Loreto,Asuntos de gobierno regional,,activo,True,si,1
+2025-04,2025,4,16,Loreto,Sin tipo,,activo,False,sd,16
 2025-04,2025,4,16,Loreto,Socioambiental,Hidrocarburos,activo,True,si,2
 2025-04,2025,4,16,Loreto,Socioambiental,Hidrocarburos,latente,False,na,6
 2025-04,2025,4,16,Loreto,Socioambiental,Otros,activo,True,si,1
@@ -16898,12 +16938,14 @@ periodo,anio,mes,cod_dep,dep,tipo,actividad,estado,con_hechos,dialogo,casos
 2025-04,2025,4,17,Madre de Dios,Socioambiental,Residuos y saneamiento,activo,True,no,1
 2025-04,2025,4,18,Moquegua,Socioambiental,Hidrocarburos,activo,False,si,1
 2025-04,2025,4,18,Moquegua,Socioambiental,Minería,activo,True,si,1
+2025-04,2025,4,19,Pasco,Sin tipo,,activo,False,sd,1
 2025-04,2025,4,19,Pasco,Socioambiental,Minería,activo,True,si,1
 2025-04,2025,4,19,Pasco,Socioambiental,Otros,activo,True,no,1
 2025-04,2025,4,20,Piura,Asuntos de gobierno local,,activo,False,sd,1
 2025-04,2025,4,20,Piura,Asuntos de gobierno local,,latente,False,na,1
 2025-04,2025,4,20,Piura,Asuntos de gobierno regional,,activo,True,si,2
 2025-04,2025,4,20,Piura,Asuntos de gobierno regional,,latente,False,na,1
+2025-04,2025,4,20,Piura,Sin tipo,,activo,False,sd,4
 2025-04,2025,4,20,Piura,Socioambiental,Minería,activo,True,si,1
 2025-04,2025,4,20,Piura,Socioambiental,Residuos y saneamiento,activo,True,no,1
 2025-04,2025,4,21,Puno,Asuntos de gobierno local,,activo,False,sd,1
@@ -17197,9 +17239,9 @@ periodo,anio,mes,cod_dep,dep,tipo,actividad,estado,con_hechos,dialogo,casos
 2025-07,2025,7,,Nacional / multirregional,Asuntos de gobierno nacional,,latente,False,na,2
 2025-07,2025,7,,Nacional / multirregional,Comunal,,latente,False,na,1
 2025-07,2025,7,,Nacional / multirregional,Demarcación territorial,,latente,False,na,1
-2025-07,2025,7,,Nacional / multirregional,Sin tipo,,activo,False,sd,1
+2025-07,2025,7,,Nacional / multirregional,Sin tipo,,activo,False,sd,5
 2025-07,2025,7,,Nacional / multirregional,Socioambiental,Hidrocarburos,latente,False,na,1
-2025-07,2025,7,,Sin ubicación,Sin tipo,,activo,False,sd,2
+2025-07,2025,7,,Sin ubicación,Sin tipo,,activo,False,sd,13
 2025-07,2025,7,,Sin ubicación,Socioambiental,Minería,activo,True,si,1
 2025-07,2025,7,,Sin ubicación,Socioambiental,Minería,latente,False,na,1
 2025-07,2025,7,01,Amazonas,Asuntos de gobierno nacional,,activo,True,si,1
@@ -17208,6 +17250,7 @@ periodo,anio,mes,cod_dep,dep,tipo,actividad,estado,con_hechos,dialogo,casos
 2025-07,2025,7,02,Áncash,Asuntos de gobierno local,,latente,False,na,1
 2025-07,2025,7,02,Áncash,Asuntos de gobierno nacional,,activo,True,si,2
 2025-07,2025,7,02,Áncash,Laboral,,activo,True,no,1
+2025-07,2025,7,02,Áncash,Sin tipo,,activo,False,sd,5
 2025-07,2025,7,02,Áncash,Socioambiental,Minería,activo,False,sd,2
 2025-07,2025,7,02,Áncash,Socioambiental,Minería,activo,True,si,2
 2025-07,2025,7,02,Áncash,Socioambiental,Minería,latente,False,na,2
@@ -17215,7 +17258,7 @@ periodo,anio,mes,cod_dep,dep,tipo,actividad,estado,con_hechos,dialogo,casos
 2025-07,2025,7,03,Apurímac,Asuntos de gobierno nacional,,activo,True,no,1
 2025-07,2025,7,03,Apurímac,Comunal,,latente,False,na,3
 2025-07,2025,7,03,Apurímac,Otros asuntos,,latente,False,na,1
-2025-07,2025,7,03,Apurímac,Sin tipo,,activo,False,sd,1
+2025-07,2025,7,03,Apurímac,Sin tipo,,activo,False,sd,8
 2025-07,2025,7,03,Apurímac,Socioambiental,Minería,activo,True,no,1
 2025-07,2025,7,04,Arequipa,Asuntos de gobierno nacional,,latente,False,na,1
 2025-07,2025,7,04,Arequipa,Socioambiental,Minería,activo,True,no,1
@@ -17223,21 +17266,22 @@ periodo,anio,mes,cod_dep,dep,tipo,actividad,estado,con_hechos,dialogo,casos
 2025-07,2025,7,05,Ayacucho,Asuntos de gobierno nacional,,activo,True,no,1
 2025-07,2025,7,05,Ayacucho,Comunal,,activo,True,no,2
 2025-07,2025,7,05,Ayacucho,Comunal,,activo,True,si,1
-2025-07,2025,7,05,Ayacucho,Sin tipo,,activo,False,sd,1
+2025-07,2025,7,05,Ayacucho,Sin tipo,,activo,False,sd,4
 2025-07,2025,7,05,Ayacucho,Socioambiental,Hidrocarburos,activo,True,si,1
 2025-07,2025,7,05,Ayacucho,Socioambiental,Minería,activo,True,si,1
 2025-07,2025,7,05,Ayacucho,Socioambiental,Minería,latente,False,na,1
 2025-07,2025,7,06,Cajamarca,Asuntos de gobierno local,,latente,False,na,1
 2025-07,2025,7,06,Cajamarca,Asuntos de gobierno nacional,,activo,True,si,1
+2025-07,2025,7,06,Cajamarca,Sin tipo,,activo,False,sd,1
 2025-07,2025,7,06,Cajamarca,Socioambiental,Minería,activo,True,no,2
 2025-07,2025,7,08,Cusco,Asuntos de gobierno nacional,,activo,True,no,1
 2025-07,2025,7,08,Cusco,Comunal,,activo,True,no,1
-2025-07,2025,7,08,Cusco,Sin tipo,,activo,False,sd,1
+2025-07,2025,7,08,Cusco,Sin tipo,,activo,False,sd,12
 2025-07,2025,7,08,Cusco,Socioambiental,Minería,activo,True,si,1
 2025-07,2025,7,08,Cusco,Socioambiental,Minería,latente,False,na,1
 2025-07,2025,7,08,Cusco,Socioambiental,Residuos y saneamiento,latente,False,na,1
 2025-07,2025,7,10,Huánuco,Asuntos de gobierno regional,,latente,False,na,1
-2025-07,2025,7,10,Huánuco,Sin tipo,,activo,False,sd,1
+2025-07,2025,7,10,Huánuco,Sin tipo,,activo,False,sd,4
 2025-07,2025,7,10,Huánuco,Socioambiental,Minería,activo,True,si,2
 2025-07,2025,7,12,Junín,Asuntos de gobierno regional,,activo,True,si,1
 2025-07,2025,7,12,Junín,Asuntos de gobierno regional,,latente,False,na,1
@@ -17249,6 +17293,7 @@ periodo,anio,mes,cod_dep,dep,tipo,actividad,estado,con_hechos,dialogo,casos
 2025-07,2025,7,13,La Libertad,Socioambiental,Minería,latente,False,na,1
 2025-07,2025,7,14,Lambayeque,Asuntos de gobierno local,,latente,False,na,1
 2025-07,2025,7,14,Lambayeque,Laboral,,latente,False,na,1
+2025-07,2025,7,14,Lambayeque,Sin tipo,,activo,False,sd,1
 2025-07,2025,7,15,Lima,Asuntos de gobierno local,,activo,True,sd,1
 2025-07,2025,7,15,Lima,Asuntos de gobierno local,,activo,True,si,1
 2025-07,2025,7,15,Lima,Asuntos de gobierno nacional,,activo,True,no,1
@@ -17256,43 +17301,50 @@ periodo,anio,mes,cod_dep,dep,tipo,actividad,estado,con_hechos,dialogo,casos
 2025-07,2025,7,15,Lima,Demarcación territorial,,activo,True,no,1
 2025-07,2025,7,15,Lima,Demarcación territorial,,latente,False,na,1
 2025-07,2025,7,15,Lima,Laboral,,latente,False,na,1
+2025-07,2025,7,15,Lima,Sin tipo,,activo,False,sd,3
 2025-07,2025,7,15,Lima,Socioambiental,Minería,activo,True,si,1
 2025-07,2025,7,15,Lima,Socioambiental,Minería,latente,False,na,1
 2025-07,2025,7,16,Loreto,Asuntos de gobierno nacional,,activo,True,si,2
+2025-07,2025,7,16,Loreto,Sin tipo,,activo,False,sd,11
 2025-07,2025,7,16,Loreto,Socioambiental,Hidrocarburos,activo,True,si,4
 2025-07,2025,7,16,Loreto,Socioambiental,Hidrocarburos,latente,False,na,7
 2025-07,2025,7,16,Loreto,Socioambiental,Otros,latente,False,na,1
 2025-07,2025,7,17,Madre de Dios,Socioambiental,Minería,latente,False,na,1
 2025-07,2025,7,18,Moquegua,Socioambiental,Hidrocarburos,activo,True,si,1
 2025-07,2025,7,18,Moquegua,Socioambiental,Minería,activo,True,si,2
+2025-07,2025,7,19,Pasco,Sin tipo,,activo,False,sd,2
 2025-07,2025,7,20,Piura,Asuntos de gobierno local,,latente,False,na,1
 2025-07,2025,7,20,Piura,Asuntos de gobierno regional,,activo,True,si,2
 2025-07,2025,7,20,Piura,Asuntos de gobierno regional,,latente,False,na,1
 2025-07,2025,7,20,Piura,Comunal,,activo,True,si,1
+2025-07,2025,7,20,Piura,Sin tipo,,activo,False,sd,3
 2025-07,2025,7,20,Piura,Socioambiental,Hidrocarburos,activo,True,si,1
 2025-07,2025,7,20,Piura,Socioambiental,Minería,activo,True,no,2
 2025-07,2025,7,21,Puno,Asuntos de gobierno local,,latente,False,na,1
 2025-07,2025,7,21,Puno,Demarcación territorial,,activo,True,no,1
 2025-07,2025,7,21,Puno,Demarcación territorial,,activo,True,si,1
 2025-07,2025,7,21,Puno,Otros asuntos,,latente,False,na,1
-2025-07,2025,7,21,Puno,Sin tipo,,activo,False,sd,1
+2025-07,2025,7,21,Puno,Sin tipo,,activo,False,sd,7
 2025-07,2025,7,21,Puno,Sin tipo,,latente,False,na,1
 2025-07,2025,7,21,Puno,Socioambiental,Minería,activo,True,si,3
 2025-07,2025,7,21,Puno,Socioambiental,Residuos y saneamiento,activo,True,si,2
 2025-07,2025,7,22,San Martín,Asuntos de gobierno local,,latente,False,na,1
 2025-07,2025,7,22,San Martín,Comunal,,activo,True,si,1
 2025-07,2025,7,22,San Martín,Comunal,,latente,False,na,2
+2025-07,2025,7,22,San Martín,Sin tipo,,activo,False,sd,2
 2025-07,2025,7,22,San Martín,Socioambiental,Otros,latente,False,na,1
 2025-07,2025,7,24,Tumbes,Laboral,,activo,True,sd,1
+2025-07,2025,7,24,Tumbes,Sin tipo,,activo,False,sd,1
 2025-07,2025,7,24,Tumbes,Socioambiental,Minería,activo,True,si,1
 2025-07,2025,7,25,Ucayali,Asuntos de gobierno local,,latente,False,na,1
+2025-07,2025,7,25,Ucayali,Sin tipo,,activo,False,sd,1
 2025-08,2025,8,,Nacional / multirregional,Asuntos de gobierno nacional,,activo,False,sd,1
 2025-08,2025,8,,Nacional / multirregional,Asuntos de gobierno nacional,,activo,True,si,1
 2025-08,2025,8,,Nacional / multirregional,Asuntos de gobierno nacional,,latente,False,na,2
 2025-08,2025,8,,Nacional / multirregional,Asuntos de gobierno regional,,activo,False,sd,1
 2025-08,2025,8,,Nacional / multirregional,Demarcación territorial,,latente,False,na,1
 2025-08,2025,8,,Nacional / multirregional,Laboral,,latente,False,na,1
-2025-08,2025,8,,Sin ubicación,Sin tipo,,activo,False,sd,2
+2025-08,2025,8,,Sin ubicación,Sin tipo,,activo,False,sd,8
 2025-08,2025,8,,Sin ubicación,Socioambiental,Hidrocarburos,activo,False,sd,1
 2025-08,2025,8,,Sin ubicación,Socioambiental,Minería,activo,True,si,1
 2025-08,2025,8,,Sin ubicación,Socioambiental,Minería,latente,False,na,1
@@ -17317,7 +17369,7 @@ periodo,anio,mes,cod_dep,dep,tipo,actividad,estado,con_hechos,dialogo,casos
 2025-08,2025,8,03,Apurímac,Asuntos de gobierno nacional,,activo,True,no,1
 2025-08,2025,8,03,Apurímac,Comunal,,latente,False,na,3
 2025-08,2025,8,03,Apurímac,Otros asuntos,,latente,False,na,1
-2025-08,2025,8,03,Apurímac,Sin tipo,,activo,False,sd,1
+2025-08,2025,8,03,Apurímac,Sin tipo,,activo,False,sd,8
 2025-08,2025,8,03,Apurímac,Socioambiental,Minería,activo,True,no,1
 2025-08,2025,8,04,Arequipa,Asuntos de gobierno nacional,,latente,False,na,1
 2025-08,2025,8,04,Arequipa,Socioambiental,Minería,activo,True,no,1
@@ -17325,21 +17377,23 @@ periodo,anio,mes,cod_dep,dep,tipo,actividad,estado,con_hechos,dialogo,casos
 2025-08,2025,8,05,Ayacucho,Asuntos de gobierno regional,,latente,False,na,1
 2025-08,2025,8,05,Ayacucho,Comunal,,activo,True,no,1
 2025-08,2025,8,05,Ayacucho,Comunal,,latente,False,na,1
-2025-08,2025,8,05,Ayacucho,Sin tipo,,activo,False,sd,1
+2025-08,2025,8,05,Ayacucho,Sin tipo,,activo,False,sd,5
 2025-08,2025,8,05,Ayacucho,Socioambiental,Hidrocarburos,activo,True,si,1
 2025-08,2025,8,05,Ayacucho,Socioambiental,Minería,latente,False,na,2
 2025-08,2025,8,06,Cajamarca,Asuntos de gobierno local,,latente,False,na,1
 2025-08,2025,8,06,Cajamarca,Asuntos de gobierno nacional,,activo,True,si,1
+2025-08,2025,8,06,Cajamarca,Sin tipo,,activo,False,sd,1
 2025-08,2025,8,06,Cajamarca,Socioambiental,Minería,activo,True,no,1
 2025-08,2025,8,06,Cajamarca,Socioambiental,Minería,latente,False,na,1
 2025-08,2025,8,07,Callao,Socioambiental,Hidrocarburos,activo,True,no,1
 2025-08,2025,8,08,Cusco,Asuntos de gobierno nacional,,activo,True,no,1
-2025-08,2025,8,08,Cusco,Sin tipo,,activo,False,sd,2
+2025-08,2025,8,08,Cusco,Sin tipo,,activo,False,sd,12
 2025-08,2025,8,08,Cusco,Socioambiental,Minería,activo,True,si,2
 2025-08,2025,8,08,Cusco,Socioambiental,Minería,latente,False,na,1
 2025-08,2025,8,08,Cusco,Socioambiental,Residuos y saneamiento,latente,False,na,1
 2025-08,2025,8,09,Huancavelica,Asuntos de gobierno nacional,,activo,True,sd,1
 2025-08,2025,8,10,Huánuco,Comunal,,activo,True,no,1
+2025-08,2025,8,10,Huánuco,Sin tipo,,activo,False,sd,1
 2025-08,2025,8,10,Huánuco,Socioambiental,Minería,activo,True,si,2
 2025-08,2025,8,10,Huánuco,Socioambiental,Residuos y saneamiento,activo,True,si,1
 2025-08,2025,8,12,Junín,Asuntos de gobierno regional,,activo,True,sd,1
@@ -17360,11 +17414,13 @@ periodo,anio,mes,cod_dep,dep,tipo,actividad,estado,con_hechos,dialogo,casos
 2025-08,2025,8,15,Lima,Demarcación territorial,,activo,True,no,1
 2025-08,2025,8,15,Lima,Demarcación territorial,,latente,False,na,1
 2025-08,2025,8,15,Lima,Laboral,,latente,False,na,1
+2025-08,2025,8,15,Lima,Sin tipo,,activo,False,sd,3
 2025-08,2025,8,15,Lima,Socioambiental,Minería,activo,True,si,1
 2025-08,2025,8,15,Lima,Socioambiental,Minería,latente,False,na,1
 2025-08,2025,8,16,Loreto,Asuntos de gobierno nacional,,activo,False,sd,1
 2025-08,2025,8,16,Loreto,Asuntos de gobierno nacional,,activo,True,si,2
 2025-08,2025,8,16,Loreto,Asuntos de gobierno regional,,activo,False,sd,1
+2025-08,2025,8,16,Loreto,Sin tipo,,activo,False,sd,7
 2025-08,2025,8,16,Loreto,Socioambiental,Hidrocarburos,activo,False,sd,3
 2025-08,2025,8,16,Loreto,Socioambiental,Hidrocarburos,activo,True,no,1
 2025-08,2025,8,16,Loreto,Socioambiental,Hidrocarburos,activo,True,sd,1
@@ -17554,7 +17610,8 @@ periodo,anio,mes,cod_dep,dep,tipo,actividad,estado,con_hechos,dialogo,casos
 2025-10,2025,10,,Nacional / multirregional,Asuntos de gobierno nacional,,activo,True,no,2
 2025-10,2025,10,,Nacional / multirregional,Asuntos de gobierno nacional,,activo,True,si,2
 2025-10,2025,10,,Nacional / multirregional,Demarcación territorial,,latente,False,na,1
-2025-10,2025,10,,Sin ubicación,Sin tipo,,activo,False,sd,3
+2025-10,2025,10,,Nacional / multirregional,Sin tipo,,activo,False,sd,3
+2025-10,2025,10,,Sin ubicación,Sin tipo,,activo,False,sd,4
 2025-10,2025,10,,Sin ubicación,Socioambiental,Minería,activo,True,si,1
 2025-10,2025,10,,Sin ubicación,Socioambiental,Minería,latente,False,na,1
 2025-10,2025,10,,Sin ubicación,Socioambiental,Residuos y saneamiento,activo,True,no,1
@@ -17595,25 +17652,28 @@ periodo,anio,mes,cod_dep,dep,tipo,actividad,estado,con_hechos,dialogo,casos
 2025-10,2025,10,07,Callao,Socioambiental,Hidrocarburos,activo,True,no,1
 2025-10,2025,10,08,Cusco,Comunal,,activo,True,no,1
 2025-10,2025,10,08,Cusco,Otros asuntos,,latente,False,na,1
-2025-10,2025,10,08,Cusco,Sin tipo,,activo,False,sd,2
+2025-10,2025,10,08,Cusco,Sin tipo,,activo,False,sd,8
 2025-10,2025,10,08,Cusco,Socioambiental,Hidrocarburos,activo,False,sd,1
 2025-10,2025,10,08,Cusco,Socioambiental,Minería,activo,False,sd,1
 2025-10,2025,10,08,Cusco,Socioambiental,Minería,activo,True,si,4
 2025-10,2025,10,08,Cusco,Socioambiental,Minería,latente,False,na,1
 2025-10,2025,10,08,Cusco,Socioambiental,Residuos y saneamiento,latente,False,na,1
 2025-10,2025,10,09,Huancavelica,Otros asuntos,,activo,True,si,1
+2025-10,2025,10,09,Huancavelica,Sin tipo,,activo,False,sd,1
 2025-10,2025,10,10,Huánuco,Asuntos de gobierno local,,activo,True,si,1
 2025-10,2025,10,10,Huánuco,Comunal,,activo,True,no,1
 2025-10,2025,10,10,Huánuco,Socioambiental,Minería,activo,True,si,3
 2025-10,2025,10,10,Huánuco,Socioambiental,Otros,activo,True,si,1
 2025-10,2025,10,10,Huánuco,Socioambiental,Residuos y saneamiento,latente,False,na,1
 2025-10,2025,10,12,Junín,Asuntos de gobierno regional,,activo,True,si,1
+2025-10,2025,10,12,Junín,Sin tipo,,activo,False,sd,2
 2025-10,2025,10,12,Junín,Socioambiental,Otros,activo,True,si,1
 2025-10,2025,10,13,La Libertad,Asuntos de gobierno nacional,,activo,True,si,1
 2025-10,2025,10,13,La Libertad,Socioambiental,Agroindustria y forestal,activo,True,si,1
 2025-10,2025,10,13,La Libertad,Socioambiental,Minería,latente,False,na,1
 2025-10,2025,10,14,Lambayeque,Asuntos de gobierno local,,latente,False,na,1
 2025-10,2025,10,14,Lambayeque,Laboral,,latente,False,na,1
+2025-10,2025,10,14,Lambayeque,Sin tipo,,activo,False,sd,3
 2025-10,2025,10,15,Lima,Asuntos de gobierno local,,activo,True,si,3
 2025-10,2025,10,15,Lima,Asuntos de gobierno local,,latente,False,na,1
 2025-10,2025,10,15,Lima,Demarcación territorial,,activo,True,no,2
@@ -17621,10 +17681,11 @@ periodo,anio,mes,cod_dep,dep,tipo,actividad,estado,con_hechos,dialogo,casos
 2025-10,2025,10,15,Lima,Laboral,,activo,True,si,1
 2025-10,2025,10,15,Lima,Otros asuntos,,activo,True,no,1
 2025-10,2025,10,15,Lima,Otros asuntos,,activo,True,si,1
-2025-10,2025,10,15,Lima,Sin tipo,,activo,False,sd,1
+2025-10,2025,10,15,Lima,Sin tipo,,activo,False,sd,8
 2025-10,2025,10,15,Lima,Socioambiental,Minería,activo,True,si,1
 2025-10,2025,10,16,Loreto,Asuntos de gobierno nacional,,activo,True,si,2
 2025-10,2025,10,16,Loreto,Asuntos de gobierno regional,,activo,True,si,1
+2025-10,2025,10,16,Loreto,Sin tipo,,activo,False,sd,12
 2025-10,2025,10,16,Loreto,Socioambiental,Hidrocarburos,activo,True,si,6
 2025-10,2025,10,16,Loreto,Socioambiental,Hidrocarburos,latente,False,na,4
 2025-10,2025,10,16,Loreto,Socioambiental,Otros,latente,False,na,1
@@ -17632,12 +17693,14 @@ periodo,anio,mes,cod_dep,dep,tipo,actividad,estado,con_hechos,dialogo,casos
 2025-10,2025,10,17,Madre de Dios,Socioambiental,Residuos y saneamiento,activo,True,si,1
 2025-10,2025,10,18,Moquegua,Socioambiental,Hidrocarburos,activo,True,si,1
 2025-10,2025,10,18,Moquegua,Socioambiental,Minería,activo,True,si,2
+2025-10,2025,10,19,Pasco,Sin tipo,,activo,False,sd,2
 2025-10,2025,10,19,Pasco,Socioambiental,Residuos y saneamiento,activo,True,sd,1
 2025-10,2025,10,20,Piura,Asuntos de gobierno local,,activo,True,si,1
 2025-10,2025,10,20,Piura,Asuntos de gobierno regional,,activo,True,sd,1
 2025-10,2025,10,20,Piura,Asuntos de gobierno regional,,activo,True,si,2
 2025-10,2025,10,20,Piura,Asuntos de gobierno regional,,latente,False,na,1
 2025-10,2025,10,20,Piura,Comunal,,activo,True,si,1
+2025-10,2025,10,20,Piura,Sin tipo,,activo,False,sd,2
 2025-10,2025,10,20,Piura,Socioambiental,Hidrocarburos,activo,True,si,1
 2025-10,2025,10,20,Piura,Socioambiental,Minería,activo,True,no,1
 2025-10,2025,10,20,Piura,Socioambiental,Minería,activo,True,si,1
@@ -17649,6 +17712,7 @@ periodo,anio,mes,cod_dep,dep,tipo,actividad,estado,con_hechos,dialogo,casos
 2025-10,2025,10,21,Puno,Demarcación territorial,,activo,True,si,1
 2025-10,2025,10,21,Puno,Otros asuntos,,activo,True,si,1
 2025-10,2025,10,21,Puno,Otros asuntos,,latente,False,na,1
+2025-10,2025,10,21,Puno,Sin tipo,,activo,False,sd,1
 2025-10,2025,10,21,Puno,Sin tipo,,latente,False,na,1
 2025-10,2025,10,21,Puno,Socioambiental,Minería,activo,True,si,6
 2025-10,2025,10,21,Puno,Socioambiental,Residuos y saneamiento,activo,False,sd,1
@@ -17881,7 +17945,7 @@ periodo,anio,mes,cod_dep,dep,tipo,actividad,estado,con_hechos,dialogo,casos
 2025-12,2025,12,13,La Libertad,Asuntos de gobierno nacional,,activo,False,sd,1
 2025-12,2025,12,13,La Libertad,Socioambiental,Minería,latente,False,na,1
 2025-12,2025,12,13,La Libertad,Socioambiental,Otros,activo,False,sd,1
-2025-12,2025,12,14,Lambayeque,Asuntos de gobierno local,,latente,False,na,1
+2025-12,2025,12,14,Lambayeque,Asuntos de gobierno local,,latente,False,na,2
 2025-12,2025,12,14,Lambayeque,Asuntos de gobierno nacional,,latente,False,na,1
 2025-12,2025,12,14,Lambayeque,Comunal,,latente,False,na,1
 2025-12,2025,12,14,Lambayeque,Laboral,,latente,False,na,1
@@ -17947,8 +18011,9 @@ periodo,anio,mes,cod_dep,dep,tipo,actividad,estado,con_hechos,dialogo,casos
 2026-01,2026,1,,Nacional / multirregional,Asuntos de gobierno regional,,activo,False,sd,1
 2026-01,2026,1,,Nacional / multirregional,Demarcación territorial,,activo,False,sd,1
 2026-01,2026,1,,Nacional / multirregional,Demarcación territorial,,activo,True,sd,1
+2026-01,2026,1,,Nacional / multirregional,Sin tipo,,activo,False,sd,1
 2026-01,2026,1,,Nacional / multirregional,Socioambiental,Hidrocarburos,activo,False,sd,1
-2026-01,2026,1,,Sin ubicación,Sin tipo,,activo,False,sd,3
+2026-01,2026,1,,Sin ubicación,Sin tipo,,activo,False,sd,16
 2026-01,2026,1,,Sin ubicación,Socioambiental,Minería,latente,False,na,1
 2026-01,2026,1,,Sin ubicación,Socioambiental,Otros,activo,False,sd,1
 2026-01,2026,1,01,Amazonas,Asuntos de gobierno local,,activo,False,sd,1
@@ -17990,17 +18055,18 @@ periodo,anio,mes,cod_dep,dep,tipo,actividad,estado,con_hechos,dialogo,casos
 2026-01,2026,1,06,Cajamarca,Socioambiental,Minería,activo,True,si,1
 2026-01,2026,1,06,Cajamarca,Socioambiental,Minería,latente,False,na,1
 2026-01,2026,1,08,Cusco,Comunal,,latente,False,na,1
-2026-01,2026,1,08,Cusco,Sin tipo,,activo,False,sd,2
+2026-01,2026,1,08,Cusco,Sin tipo,,activo,False,sd,7
 2026-01,2026,1,08,Cusco,Socioambiental,Minería,activo,False,sd,1
 2026-01,2026,1,08,Cusco,Socioambiental,Minería,activo,True,si,3
 2026-01,2026,1,08,Cusco,Socioambiental,Minería,latente,False,na,1
 2026-01,2026,1,09,Huancavelica,Sin tipo,,activo,False,sd,1
 2026-01,2026,1,10,Huánuco,Comunal,,activo,True,no,1
-2026-01,2026,1,10,Huánuco,Sin tipo,,activo,False,sd,1
+2026-01,2026,1,10,Huánuco,Sin tipo,,activo,False,sd,2
 2026-01,2026,1,10,Huánuco,Socioambiental,Residuos y saneamiento,activo,True,si,2
 2026-01,2026,1,12,Junín,Asuntos de gobierno regional,,activo,True,si,1
 2026-01,2026,1,12,Junín,Comunal,,activo,True,si,1
 2026-01,2026,1,12,Junín,Otros asuntos,,activo,True,si,1
+2026-01,2026,1,12,Junín,Sin tipo,,activo,False,sd,1
 2026-01,2026,1,12,Junín,Socioambiental,Agroindustria y forestal,activo,True,si,1
 2026-01,2026,1,12,Junín,Socioambiental,Minería,activo,True,sd,1
 2026-01,2026,1,12,Junín,Socioambiental,Minería,activo,True,si,2
@@ -18008,6 +18074,7 @@ periodo,anio,mes,cod_dep,dep,tipo,actividad,estado,con_hechos,dialogo,casos
 2026-01,2026,1,13,La Libertad,Socioambiental,Minería,activo,True,si,1
 2026-01,2026,1,13,La Libertad,Socioambiental,Minería,latente,False,na,1
 2026-01,2026,1,14,Lambayeque,Asuntos de gobierno nacional,,activo,True,si,1
+2026-01,2026,1,14,Lambayeque,Sin tipo,,activo,False,sd,1
 2026-01,2026,1,15,Lima,Asuntos de gobierno local,,activo,True,si,2
 2026-01,2026,1,15,Lima,Asuntos de gobierno local,,latente,False,na,3
 2026-01,2026,1,15,Lima,Asuntos de gobierno nacional,,activo,True,no,1
@@ -18015,10 +18082,11 @@ periodo,anio,mes,cod_dep,dep,tipo,actividad,estado,con_hechos,dialogo,casos
 2026-01,2026,1,15,Lima,Asuntos de gobierno nacional,,latente,False,na,1
 2026-01,2026,1,15,Lima,Asuntos de gobierno regional,,activo,True,si,1
 2026-01,2026,1,15,Lima,Demarcación territorial,,activo,True,no,1
-2026-01,2026,1,15,Lima,Sin tipo,,activo,False,sd,1
+2026-01,2026,1,15,Lima,Sin tipo,,activo,False,sd,5
 2026-01,2026,1,15,Lima,Socioambiental,Minería,activo,True,si,3
 2026-01,2026,1,16,Loreto,Asuntos de gobierno nacional,,latente,False,na,1
 2026-01,2026,1,16,Loreto,Asuntos de gobierno regional,,activo,True,si,2
+2026-01,2026,1,16,Loreto,Sin tipo,,activo,False,sd,9
 2026-01,2026,1,16,Loreto,Socioambiental,Hidrocarburos,activo,True,no,1
 2026-01,2026,1,16,Loreto,Socioambiental,Hidrocarburos,activo,True,si,1
 2026-01,2026,1,16,Loreto,Socioambiental,Hidrocarburos,latente,False,na,7
@@ -18442,10 +18510,12 @@ periodo,anio,mes,cod_dep,dep,tipo,actividad,estado,con_hechos,dialogo,casos
 2026-05,2026,5,,Nacional / multirregional,Asuntos de gobierno nacional,,activo,False,sd,2
 2026-05,2026,5,,Nacional / multirregional,Asuntos de gobierno nacional,,activo,True,si,2
 2026-05,2026,5,,Nacional / multirregional,Asuntos de gobierno nacional,,latente,False,na,1
+2026-05,2026,5,,Nacional / multirregional,Demarcación territorial,,activo,False,sd,1
 2026-05,2026,5,,Nacional / multirregional,Demarcación territorial,,latente,False,na,1
+2026-05,2026,5,,Nacional / multirregional,Sin tipo,,activo,False,sd,4
 2026-05,2026,5,,Sin ubicación,Asuntos de gobierno nacional,,activo,False,sd,1
 2026-05,2026,5,,Sin ubicación,Laboral,,activo,False,sd,1
-2026-05,2026,5,,Sin ubicación,Sin tipo,,activo,False,sd,2
+2026-05,2026,5,,Sin ubicación,Sin tipo,,activo,False,sd,5
 2026-05,2026,5,,Sin ubicación,Socioambiental,Hidrocarburos,activo,False,sd,1
 2026-05,2026,5,,Sin ubicación,Socioambiental,Minería,activo,False,sd,2
 2026-05,2026,5,,Sin ubicación,Socioambiental,Minería,activo,True,si,1
@@ -18478,6 +18548,7 @@ periodo,anio,mes,cod_dep,dep,tipo,actividad,estado,con_hechos,dialogo,casos
 2026-05,2026,5,04,Arequipa,Socioambiental,Minería,activo,True,no,1
 2026-05,2026,5,05,Ayacucho,Comunal,,activo,True,si,1
 2026-05,2026,5,05,Ayacucho,Otros asuntos,,activo,True,sd,1
+2026-05,2026,5,05,Ayacucho,Sin tipo,,activo,False,sd,3
 2026-05,2026,5,06,Cajamarca,Asuntos de gobierno nacional,,activo,True,si,1
 2026-05,2026,5,06,Cajamarca,Socioambiental,Minería,activo,True,si,1
 2026-05,2026,5,08,Cusco,Asuntos de gobierno nacional,,activo,False,sd,2
@@ -18488,6 +18559,7 @@ periodo,anio,mes,cod_dep,dep,tipo,actividad,estado,con_hechos,dialogo,casos
 2026-05,2026,5,08,Cusco,Socioambiental,Minería,activo,True,si,5
 2026-05,2026,5,08,Cusco,Socioambiental,Minería,latente,False,na,1
 2026-05,2026,5,09,Huancavelica,Asuntos de gobierno nacional,,activo,False,sd,2
+2026-05,2026,5,09,Huancavelica,Asuntos de gobierno regional,,activo,False,sd,1
 2026-05,2026,5,09,Huancavelica,Otros asuntos,,latente,False,na,1
 2026-05,2026,5,09,Huancavelica,Sin tipo,,activo,True,sd,1
 2026-05,2026,5,10,Huánuco,Asuntos de gobierno local,,activo,False,sd,1
@@ -18498,9 +18570,10 @@ periodo,anio,mes,cod_dep,dep,tipo,actividad,estado,con_hechos,dialogo,casos
 2026-05,2026,5,10,Huánuco,Socioambiental,Residuos y saneamiento,activo,False,sd,1
 2026-05,2026,5,10,Huánuco,Socioambiental,Residuos y saneamiento,activo,True,si,1
 2026-05,2026,5,11,Ica,Otros asuntos,,activo,True,si,1
-2026-05,2026,5,12,Junín,Sin tipo,,activo,False,sd,2
+2026-05,2026,5,12,Junín,Sin tipo,,activo,False,sd,8
 2026-05,2026,5,12,Junín,Socioambiental,Minería,activo,False,sd,1
 2026-05,2026,5,13,La Libertad,Asuntos de gobierno nacional,,activo,True,si,1
+2026-05,2026,5,13,La Libertad,Sin tipo,,activo,False,sd,2
 2026-05,2026,5,13,La Libertad,Socioambiental,Minería,latente,False,na,1
 2026-05,2026,5,15,Lima,Asuntos de gobierno local,,activo,False,sd,2
 2026-05,2026,5,15,Lima,Asuntos de gobierno local,,activo,True,sd,1
@@ -18518,6 +18591,7 @@ periodo,anio,mes,cod_dep,dep,tipo,actividad,estado,con_hechos,dialogo,casos
 2026-05,2026,5,15,Lima,Socioambiental,Otros,latente,False,na,1
 2026-05,2026,5,16,Loreto,Asuntos de gobierno nacional,,latente,False,na,3
 2026-05,2026,5,16,Loreto,Laboral,,activo,True,no,1
+2026-05,2026,5,16,Loreto,Sin tipo,,activo,False,sd,9
 2026-05,2026,5,16,Loreto,Socioambiental,Hidrocarburos,activo,True,sd,1
 2026-05,2026,5,16,Loreto,Socioambiental,Hidrocarburos,activo,True,si,5
 2026-05,2026,5,16,Loreto,Socioambiental,Hidrocarburos,latente,False,na,3
@@ -18529,6 +18603,7 @@ periodo,anio,mes,cod_dep,dep,tipo,actividad,estado,con_hechos,dialogo,casos
 2026-05,2026,5,20,Piura,Asuntos de gobierno local,,activo,True,sd,1
 2026-05,2026,5,20,Piura,Asuntos de gobierno nacional,,activo,True,si,2
 2026-05,2026,5,20,Piura,Asuntos de gobierno regional,,activo,True,si,1
+2026-05,2026,5,20,Piura,Sin tipo,,activo,False,sd,9
 2026-05,2026,5,20,Piura,Socioambiental,Hidrocarburos,activo,True,si,1
 2026-05,2026,5,21,Puno,Asuntos de gobierno local,,activo,False,sd,1
 2026-05,2026,5,21,Puno,Asuntos de gobierno local,,latente,False,na,1
@@ -18543,9 +18618,11 @@ periodo,anio,mes,cod_dep,dep,tipo,actividad,estado,con_hechos,dialogo,casos
 2026-05,2026,5,21,Puno,Socioambiental,Residuos y saneamiento,activo,True,si,1
 2026-05,2026,5,22,San Martín,Comunal,,activo,False,sd,1
 2026-05,2026,5,24,Tumbes,Asuntos de gobierno regional,,latente,False,na,1
+2026-05,2026,5,24,Tumbes,Sin tipo,,activo,False,sd,1
 2026-05,2026,5,24,Tumbes,Socioambiental,Otros,latente,False,na,1
 2026-05,2026,5,25,Ucayali,Asuntos de gobierno nacional,,activo,True,sd,1
 2026-05,2026,5,25,Ucayali,Otros asuntos,,activo,True,si,1
+2026-05,2026,5,25,Ucayali,Sin tipo,,activo,False,sd,1
 2026-05,2026,5,25,Ucayali,Socioambiental,Otros,activo,False,sd,1
 2026-06,2026,6,,Nacional / multirregional,Asuntos de gobierno nacional,,activo,False,sd,2
 2026-06,2026,6,,Nacional / multirregional,Asuntos de gobierno nacional,,activo,True,si,1
@@ -18553,7 +18630,8 @@ periodo,anio,mes,cod_dep,dep,tipo,actividad,estado,con_hechos,dialogo,casos
 2026-06,2026,6,,Nacional / multirregional,Asuntos de gobierno regional,,latente,False,na,1
 2026-06,2026,6,,Nacional / multirregional,Demarcación territorial,,activo,False,sd,1
 2026-06,2026,6,,Nacional / multirregional,Demarcación territorial,,latente,False,na,1
-2026-06,2026,6,,Sin ubicación,Sin tipo,,activo,False,sd,1
+2026-06,2026,6,,Nacional / multirregional,Sin tipo,,activo,False,sd,2
+2026-06,2026,6,,Sin ubicación,Sin tipo,,activo,False,sd,6
 2026-06,2026,6,,Sin ubicación,Socioambiental,Hidrocarburos,activo,False,sd,1
 2026-06,2026,6,,Sin ubicación,Socioambiental,Minería,activo,False,sd,1
 2026-06,2026,6,,Sin ubicación,Socioambiental,Minería,activo,True,si,1
@@ -18587,8 +18665,10 @@ periodo,anio,mes,cod_dep,dep,tipo,actividad,estado,con_hechos,dialogo,casos
 2026-06,2026,6,04,Arequipa,Socioambiental,Minería,activo,False,sd,1
 2026-06,2026,6,05,Ayacucho,Comunal,,activo,True,si,1
 2026-06,2026,6,05,Ayacucho,Otros asuntos,,activo,True,sd,1
+2026-06,2026,6,05,Ayacucho,Sin tipo,,activo,False,sd,2
 2026-06,2026,6,05,Ayacucho,Socioambiental,Minería,activo,True,si,1
 2026-06,2026,6,06,Cajamarca,Asuntos de gobierno nacional,,activo,True,si,1
+2026-06,2026,6,06,Cajamarca,Sin tipo,,activo,False,sd,1
 2026-06,2026,6,08,Cusco,Asuntos de gobierno nacional,,activo,False,sd,2
 2026-06,2026,6,08,Cusco,Comunal,,activo,False,sd,1
 2026-06,2026,6,08,Cusco,Comunal,,latente,False,na,1
@@ -18606,12 +18686,13 @@ periodo,anio,mes,cod_dep,dep,tipo,actividad,estado,con_hechos,dialogo,casos
 2026-06,2026,6,10,Huánuco,Socioambiental,Residuos y saneamiento,activo,True,si,1
 2026-06,2026,6,11,Ica,Otros asuntos,,activo,True,si,1
 2026-06,2026,6,12,Junín,Asuntos de gobierno regional,,activo,True,si,1
-2026-06,2026,6,12,Junín,Sin tipo,,activo,False,sd,1
+2026-06,2026,6,12,Junín,Sin tipo,,activo,False,sd,6
 2026-06,2026,6,12,Junín,Socioambiental,Agroindustria y forestal,activo,True,si,1
 2026-06,2026,6,12,Junín,Socioambiental,Minería,activo,True,si,1
 2026-06,2026,6,12,Junín,Socioambiental,Otros,activo,True,si,1
 2026-06,2026,6,13,La Libertad,Asuntos de gobierno nacional,,activo,True,sd,1
 2026-06,2026,6,13,La Libertad,Asuntos de gobierno nacional,,activo,True,si,1
+2026-06,2026,6,13,La Libertad,Sin tipo,,activo,False,sd,1
 2026-06,2026,6,13,La Libertad,Socioambiental,Minería,latente,False,na,1
 2026-06,2026,6,15,Lima,Asuntos de gobierno local,,activo,True,si,1
 2026-06,2026,6,15,Lima,Asuntos de gobierno local,,latente,False,na,4
@@ -18629,7 +18710,7 @@ periodo,anio,mes,cod_dep,dep,tipo,actividad,estado,con_hechos,dialogo,casos
 2026-06,2026,6,16,Loreto,Asuntos de gobierno nacional,,activo,True,si,1
 2026-06,2026,6,16,Loreto,Asuntos de gobierno nacional,,latente,False,na,3
 2026-06,2026,6,16,Loreto,Asuntos de gobierno regional,,activo,True,si,1
-2026-06,2026,6,16,Loreto,Sin tipo,,activo,False,sd,1
+2026-06,2026,6,16,Loreto,Sin tipo,,activo,False,sd,10
 2026-06,2026,6,16,Loreto,Socioambiental,Hidrocarburos,activo,False,sd,1
 2026-06,2026,6,16,Loreto,Socioambiental,Hidrocarburos,activo,False,si,1
 2026-06,2026,6,16,Loreto,Socioambiental,Hidrocarburos,activo,True,sd,1
@@ -18645,6 +18726,7 @@ periodo,anio,mes,cod_dep,dep,tipo,actividad,estado,con_hechos,dialogo,casos
 2026-06,2026,6,20,Piura,Asuntos de gobierno nacional,,activo,True,sd,1
 2026-06,2026,6,20,Piura,Asuntos de gobierno nacional,,activo,True,si,2
 2026-06,2026,6,20,Piura,Asuntos de gobierno regional,,activo,True,sd,1
+2026-06,2026,6,20,Piura,Sin tipo,,activo,False,sd,10
 2026-06,2026,6,21,Puno,Asuntos de gobierno local,,activo,False,sd,1
 2026-06,2026,6,21,Puno,Asuntos de gobierno local,,latente,False,na,1
 2026-06,2026,6,21,Puno,Asuntos de gobierno regional,,activo,False,sd,1
@@ -18659,6 +18741,7 @@ periodo,anio,mes,cod_dep,dep,tipo,actividad,estado,con_hechos,dialogo,casos
 2026-06,2026,6,22,San Martín,Sin tipo,,activo,True,si,1
 2026-06,2026,6,24,Tumbes,Asuntos de gobierno nacional,,activo,True,si,1
 2026-06,2026,6,24,Tumbes,Asuntos de gobierno regional,,latente,False,na,1
+2026-06,2026,6,24,Tumbes,Sin tipo,,activo,False,sd,1
 2026-06,2026,6,24,Tumbes,Socioambiental,Otros,latente,False,na,1
 2026-06,2026,6,25,Ucayali,Asuntos de gobierno nacional,,activo,True,sd,1
 2026-06,2026,6,25,Ucayali,Otros asuntos,,activo,True,si,1
@@ -18669,17 +18752,18 @@ periodo,anio,mes,cod_dep,dep,tipo,actividad,estado,con_hechos,dialogo,casos
 2026-07,2026,7,,Nacional / multirregional,Asuntos de gobierno nacional,,latente,False,na,2
 2026-07,2026,7,,Nacional / multirregional,Asuntos de gobierno regional,,latente,False,na,1
 2026-07,2026,7,,Nacional / multirregional,Demarcación territorial,,latente,False,na,1
-2026-07,2026,7,,Nacional / multirregional,Sin tipo,,activo,False,sd,1
+2026-07,2026,7,,Nacional / multirregional,Sin tipo,,activo,False,sd,5
 2026-07,2026,7,,Nacional / multirregional,Sin tipo,,activo,True,sd,2
-2026-07,2026,7,,Sin ubicación,Asuntos de gobierno nacional,,activo,False,sd,1
-2026-07,2026,7,,Sin ubicación,Sin tipo,,activo,False,sd,1
+2026-07,2026,7,,Sin ubicación,Asuntos de gobierno nacional,,activo,False,sd,2
+2026-07,2026,7,,Sin ubicación,Asuntos de gobierno regional,,activo,False,sd,1
+2026-07,2026,7,,Sin ubicación,Sin tipo,,activo,False,sd,9
 2026-07,2026,7,,Sin ubicación,Socioambiental,Minería,activo,False,sd,1
 2026-07,2026,7,,Sin ubicación,Socioambiental,Minería,activo,True,si,1
 2026-07,2026,7,,Sin ubicación,Socioambiental,Otros,activo,False,sd,1
 2026-07,2026,7,,Sin ubicación,Socioambiental,Residuos y saneamiento,activo,True,si,1
 2026-07,2026,7,01,Amazonas,Asuntos de gobierno local,,latente,False,na,1
 2026-07,2026,7,01,Amazonas,Asuntos de gobierno nacional,,latente,False,na,1
-2026-07,2026,7,01,Amazonas,Sin tipo,,activo,False,sd,1
+2026-07,2026,7,01,Amazonas,Sin tipo,,activo,False,sd,2
 2026-07,2026,7,01,Amazonas,Socioambiental,Minería,activo,True,no,1
 2026-07,2026,7,02,Áncash,Asuntos de gobierno nacional,,activo,False,sd,1
 2026-07,2026,7,02,Áncash,Asuntos de gobierno regional,,activo,False,sd,1
@@ -18713,12 +18797,13 @@ periodo,anio,mes,cod_dep,dep,tipo,actividad,estado,con_hechos,dialogo,casos
 2026-07,2026,7,08,Cusco,Socioambiental,Minería,activo,True,no,1
 2026-07,2026,7,08,Cusco,Socioambiental,Minería,activo,True,si,2
 2026-07,2026,7,08,Cusco,Socioambiental,Minería,latente,False,na,1
-2026-07,2026,7,09,Huancavelica,Asuntos de gobierno nacional,,activo,False,sd,1
+2026-07,2026,7,09,Huancavelica,Asuntos de gobierno nacional,,activo,False,sd,2
 2026-07,2026,7,09,Huancavelica,Otros asuntos,,latente,False,na,1
-2026-07,2026,7,10,Huánuco,Sin tipo,,activo,False,sd,2
+2026-07,2026,7,10,Huánuco,Sin tipo,,activo,False,sd,5
 2026-07,2026,7,10,Huánuco,Socioambiental,Minería,activo,True,si,1
 2026-07,2026,7,10,Huánuco,Socioambiental,Otros,activo,True,si,1
 2026-07,2026,7,11,Ica,Otros asuntos,,activo,False,sd,1
+2026-07,2026,7,12,Junín,Sin tipo,,activo,False,sd,9
 2026-07,2026,7,12,Junín,Socioambiental,Minería,activo,True,si,1
 2026-07,2026,7,13,La Libertad,Asuntos de gobierno nacional,,activo,True,si,2
 2026-07,2026,7,13,La Libertad,Socioambiental,Agroindustria y forestal,activo,True,si,1
@@ -18739,6 +18824,7 @@ periodo,anio,mes,cod_dep,dep,tipo,actividad,estado,con_hechos,dialogo,casos
 2026-07,2026,7,16,Loreto,Asuntos de gobierno regional,,activo,False,sd,1
 2026-07,2026,7,16,Loreto,Asuntos de gobierno regional,,activo,True,si,1
 2026-07,2026,7,16,Loreto,Laboral,,activo,False,sd,1
+2026-07,2026,7,16,Loreto,Sin tipo,,activo,False,sd,3
 2026-07,2026,7,16,Loreto,Socioambiental,Hidrocarburos,activo,True,si,4
 2026-07,2026,7,16,Loreto,Socioambiental,Hidrocarburos,latente,False,na,4
 2026-07,2026,7,16,Loreto,Socioambiental,Minería,activo,False,sd,1
@@ -18753,6 +18839,7 @@ periodo,anio,mes,cod_dep,dep,tipo,actividad,estado,con_hechos,dialogo,casos
 2026-07,2026,7,20,Piura,Asuntos de gobierno local,,activo,True,si,2
 2026-07,2026,7,20,Piura,Asuntos de gobierno nacional,,activo,True,si,1
 2026-07,2026,7,20,Piura,Asuntos de gobierno regional,,activo,True,si,3
+2026-07,2026,7,20,Piura,Sin tipo,,activo,False,sd,6
 2026-07,2026,7,21,Puno,Asuntos de gobierno local,,activo,False,sd,1
 2026-07,2026,7,21,Puno,Asuntos de gobierno local,,latente,False,na,1
 2026-07,2026,7,21,Puno,Asuntos de gobierno regional,,activo,False,sd,1
@@ -18767,6 +18854,7 @@ periodo,anio,mes,cod_dep,dep,tipo,actividad,estado,con_hechos,dialogo,casos
 2026-07,2026,7,22,San Martín,Comunal,,activo,True,si,1
 2026-07,2026,7,24,Tumbes,Asuntos de gobierno nacional,,activo,True,si,1
 2026-07,2026,7,24,Tumbes,Asuntos de gobierno regional,,latente,False,na,1
+2026-07,2026,7,24,Tumbes,Sin tipo,,activo,False,sd,1
 2026-07,2026,7,24,Tumbes,Socioambiental,Agroindustria y forestal,activo,True,si,1
 2026-07,2026,7,25,Ucayali,Asuntos de gobierno nacional,,activo,True,si,1
 2026-07,2026,7,25,Ucayali,Otros asuntos,,activo,True,no,1

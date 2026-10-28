@@ -104,6 +104,17 @@ def main():
     fichas["distrito"] = fichas["distrito"].fillna("")
     guardar_json(fichas.to_dict(orient="records"), WEB / "casos.json")
 
+    # Cifras oficiales que declara cada reporte (scripts/extraer_resumen_oficial.py).
+    # El N.° 249 (nov 2024) declara 209 registrados en su página de estadísticas, pero su
+    # portada y la suma de activos (154) + latentes (40) dan 194: se usa 194.
+    of = pd.read_csv(PROC / "resumen_oficial.csv").dropna(subset=["registrados"])
+    of.loc[of["reporte_n"] == 249, "registrados"] = 194
+    of["periodo"] = of["anio"].astype(int).astype(str) + "-" + of["mes"].astype(int).astype(str).str.zfill(2)
+    columnas_of = ["periodo", "reporte_n", "registrados", "activos", "latentes", "socioambientales",
+                   "pct_mineria", "pct_hidrocarburos", "en_dialogo", "nuevos", "resueltos",
+                   "fallecidos", "heridos"]
+    guardar_json({c: of[c].tolist() for c in columnas_of}, WEB / "oficial.json")
+
     print(anual.to_string())
     print(json.dumps({k: h[k] for k in ["prom_registrados_mes", "pct_socioambiental", "pct_top5_dep"]}))
     print(f"Fichas de casos: {len(fichas):,}")
