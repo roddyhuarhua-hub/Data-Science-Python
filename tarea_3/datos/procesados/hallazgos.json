@@ -1,0 +1,67 @@
+{
+  "periodo": [
+    "2015-01",
+    "2026-08"
+  ],
+  "meses": 140,
+  "filas": 27318,
+  "prom_registrados_mes": 195.1,
+  "pct_socioambiental": 0.632,
+  "pct_actividad": {
+    "Minería": 0.619,
+    "Hidrocarburos": 0.185,
+    "Otros": 0.076,
+    "Residuos y saneamiento": 0.052,
+    "Energía": 0.034,
+    "Agroindustria y forestal": 0.033
+  },
+  "top5_dep_socioambiental": {
+    "Áncash": 0.125,
+    "Loreto": 0.123,
+    "Cusco": 0.091,
+    "Puno": 0.088,
+    "Cajamarca": 0.071
+  },
+  "pct_top5_dep": 0.498,
+  "hidrocarburos_top_dep": {
+    "Loreto": 0.608,
+    "Ayacucho": 0.106,
+    "Piura": 0.056
+  },
+  "pct_dialogo_por_anio": {
+    "2015": 0.587,
+    "2016": 0.671,
+    "2017": 0.667,
+    "2018": 0.661,
+    "2019": 0.723,
+    "2020": 0.771,
+    "2021": 0.771,
+    "2022": 0.87,
+    "2023": 0.888,
+    "2024": 0.813,
+    "2025": 0.807,
+    "2026": 0.88
+  },
+  "pct_dialogo_por_actividad": {
+    "Agroindustria y forestal": 0.681,
+    "Energía": 0.755,
+    "Hidrocarburos": 0.816,
+    "Minería": 0.728,
+    "Otros": 0.545,
+    "Residuos y saneamiento": 0.777
+  },
+  "socioambientales_por_anio": {
+    "2015": 142.3,
+    "2016": 147.5,
+    "2017": 128.9,
+    "2018": 123.2,
+    "2019": 120.8,
+    "2020": 127.8,
+    "2021": 127.0,
+    "2022": 134.3,
+    "2023": 139.6,
+    "2024": 107.4,
+    "2025": 84.1,
+    "2026": 84.4
+  }
+}
