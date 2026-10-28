@@ -6,7 +6,8 @@
 |---|---|
 | Dashboard público | https://roddyhuarhua-hub.github.io/Data-Science-Python/ |
 | Reel | [`reel/reel.mp4`](reel/reel.mp4) |
-| Publicación de LinkedIn | _pendiente_ |
+| Publicación de LinkedIn (reel y hallazgos) | https://www.linkedin.com/feed/update/urn:li:activity:7521305573431099392/ |
+| Publicación de LinkedIn (capturas del dashboard) | https://www.linkedin.com/feed/update/urn:li:activity:7521308402308878337/ |
 | Código | esta carpeta (`tarea_3/`, rama `tarea-3`) |
 
 ## Tema y pregunta de investigación
