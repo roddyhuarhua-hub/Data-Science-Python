@@ -1,0 +1,7 @@
+.venv/
+datos/*
+!datos/catalogo_oefa_crudo.csv
+!datos/perfil_datos.md
+__pycache__/
+.pytest_cache/
+salidas/

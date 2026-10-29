@@ -1,0 +1,11 @@
+id,pregunta,verdad,tolerancia,dataset,periodo,verificar_a_mano
+sinada_cajamarca_2024,"¿Cuántas denuncias ambientales del SINADA registró el OEFA en el departamento de Cajamarca en 2024?",133,0,sinada,2024,si
+sinada_2024,"¿Cuántas denuncias ambientales registró el SINADA del OEFA en todo el Perú en 2024?",3993,0,sinada,2024,no
+sinada_lima_2023,"¿Cuántas denuncias ambientales del SINADA se registraron en el departamento de Lima en 2023?",1472,0,sinada,2023,no
+sinada_mineria_2024,"¿Cuántas denuncias ambientales del SINADA registradas en 2024 tenían como actividad económica la minería?",442,0,sinada,2024,no
+supervision_2023,"¿Cuántos informes de supervisión aprobó la Dirección de Supervisión del OEFA en 2023?",6096,0,supervision,2023,no
+medidas_loreto_2023,"¿Cuántas medidas administrativas dictaron las direcciones de supervisión del OEFA en Loreto en 2023?",238,0,medidas,2023,no
+multas_mineria_2023,"¿Cuántas resoluciones con multa firme del OEFA correspondieron al sector minería en 2023?",274,0,multas_firmes,2023,no
+multas_soles_2024,"¿A cuánto sumaron las multas firmes impuestas por el OEFA en 2024, en millones de soles?",166.47,0.5,multas_firmes,2024,no
+rd_2024,"¿Cuántas resoluciones directorales emitió la Dirección de Fiscalización y Aplicación de Incentivos del OEFA en 2024?",1705,0,resoluciones_directorales,2024,si
+tfa_2024,"¿Cuántos expedientes resolvió el Tribunal de Fiscalización Ambiental del OEFA en 2024?",1044,0,expedientes_tfa,2024,no

@@ -1,0 +1,14 @@
+[project]
+name = "mcp-oefa"
+version = "0.1.0"
+description = "Servidor MCP con los datos abiertos de fiscalización ambiental del OEFA"
+requires-python = ">=3.11"
+dependencies = [
+    "fastmcp>=4,<5",
+    "httpx",
+    "openpyxl>=3.1.5",
+    "pandas",
+]
+
+[dependency-groups]
+dev = ["pytest"]
