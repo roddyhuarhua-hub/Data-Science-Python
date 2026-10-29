@@ -8,6 +8,7 @@ Escribe resultados.csv y cuenta cuántas acierta, cuántas se equivoca y en cuá
 """
 import argparse
 import json
+import shutil
 import subprocess
 import time
 from concurrent.futures import ThreadPoolExecutor
@@ -26,13 +27,18 @@ MODOS = {   # todas sin las herramientas de archivos y terminal de Claude Code
     "web": ["--tools", "WebSearch,WebFetch", "--allowedTools", "WebSearch,WebFetch", "--strict-mcp-config"],
     "mcp": ["--tools", "", "--strict-mcp-config", "--mcp-config", str(AQUI / ".mcp.json"), "--allowedTools", "mcp__oefa"],
 }
+# En Windows npm instala claude.cmd, que pasa por cmd.exe y rompe las comillas del JSON: se llama al .exe directo
+CLAUDE = shutil.which("claude") or "claude"
+EXE = Path(CLAUDE).parent / "node_modules" / "@anthropic-ai" / "claude-code" / "bin" / "claude.exe"
+if CLAUDE.lower().endswith(".cmd") and EXE.exists():
+    CLAUDE = str(EXE)
 
 
 def preguntar(pregunta, modo, modelo):
-    cmd = ["claude", "-p", INSTRUCCION + pregunta, "--output-format", "json", "--json-schema", json.dumps(ESQUEMA),
+    cmd = [CLAUDE, "-p", INSTRUCCION + pregunta, "--output-format", "json", "--json-schema", json.dumps(ESQUEMA),
            "--no-session-persistence", "--model", modelo, *MODOS[modo]]
     t = time.time()
-    proc = subprocess.run(cmd, capture_output=True, text=True, timeout=600, cwd=AQUI)
+    proc = subprocess.run(cmd, capture_output=True, text=True, encoding="utf-8", timeout=600, cwd=AQUI)
     try:
         salida = json.loads(proc.stdout)
     except json.JSONDecodeError:

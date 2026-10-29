@@ -1,0 +1,31 @@
+id,modo,verdad,valor,fuente,segundos,turnos,resultado
+sinada_cajamarca_2024,memoria,133.0,,No fue posible acceder a los datos del proyecto tarea_4 (herramientas de lectura deshabilitadas),23.3,6,no sabe
+sinada_cajamarca_2024,web,133.0,,"No disponible — Los reportes anuales 2024 del GORE Cajamarca y Municipalidad Provincial de Cajamarca en SINIA contienen esta información, pero los documentos PDF no son accesibles directamente. El portal datosabiertos.oefa.gob.pe tiene los datos completos de SINADA pero requiere acceso interactivo para filtrar por región y año.",62.8,8,no sabe
+sinada_cajamarca_2024,mcp,133.0,133.0,"OEFA - Denuncias SINADA 2019-2025, periodo 2024-01-03 a 2024-12-31",15.6,3,acierta
+sinada_2024,memoria,3993.0,,No pude acceder a los archivos del proyecto para verificar la cifra,20.3,6,no sabe
+sinada_2024,web,3993.0,,"No disponible. Los datos públicos del OEFA/SINADA consultados en sinia.minam.gob.pe y reportes de prensa (ProActivo) solo proporcionan 6,468 denuncias para el período enero 2024 - julio 2025, no específicamente para 2024.",39.4,7,no sabe
+sinada_2024,mcp,3993.0,3993.0,"Dataset Denuncias SINADA 2019-2025, portal de datos abiertos del OEFA (https://datosabiertos.oefa.gob.pe/dataviews/262247/denuncias-sinada-2019-2025/), período 2024-01-03 a 2024-12-31",13.7,3,acierta
+sinada_lima_2023,memoria,1472.0,,Sin acceso a los datos del SINADA/OEFA para verificar,13.4,2,no sabe
+sinada_lima_2023,web,1472.0,,No disponible con certeza. Los reportes existen en SINIA (sinia.minam.gob.pe) pero no pude extraer el número específico de los documentos disponibles,81.9,12,no sabe
+sinada_lima_2023,mcp,1472.0,1472.0,OEFA - Denuncias SINADA 2019-2025 (datosabiertos.oefa.gob.pe),21.5,3,acierta
+sinada_mineria_2024,memoria,442.0,,"No tengo acceso a las herramientas de lectura de archivos en esta sesión para consultar los datos locales del SINADA. Para obtener esta información, necesitarías consultar directamente la plataforma del SINADA (https://sinada.minam.gob.pe/) o los datos que procesaste en tu servidor MCP del OEFA.",18.3,5,no sabe
+sinada_mineria_2024,web,442.0,,"No pude acceder con certeza al dato específico. El dataset ""Denuncias SINADA 2019-2025"" está disponible en https://datosabiertos.oefa.gob.pe/dataviews/262247/denuncias-sinada-2019-2025/ pero requiere filtrar por año 2024 y actividad económica ""minería"". El OEFA gestiona 6,468 denuncias totales 2024-2025, con 29% bajo su competencia directa (que incluye minería entre otros sectores).",122.4,17,no sabe
+sinada_mineria_2024,mcp,442.0,442.0,"SINADA 2019-2025, https://datosabiertos.oefa.gob.pe/dataviews/262247/denuncias-sinada-2019-2025/, período 2024-01-03 a 2024-12-31",16.7,3,acierta
+supervision_2023,memoria,6096.0,,No disponible - herramientas de lectura de archivos deshabilitadas,15.6,6,no sabe
+supervision_2023,web,6096.0,,No disponible - datos públicos del OEFA no accesibles actualmente; revisar servidor MCP local o portal datosabiertos.gob.pe,43.5,8,no sabe
+supervision_2023,mcp,6096.0,6096.0,OEFA - Informes de la Dirección de Supervisión 2019-2025 (datosabiertos.oefa.gob.pe),13.5,3,acierta
+medidas_loreto_2023,memoria,238.0,,No disponible - herramientas de lectura deshabilitadas,19.4,6,no sabe
+medidas_loreto_2023,web,238.0,,No accesible con certeza. Datos disponibles en: https://www.datosabiertos.gob.pe/dataset/oefa-supervisi%C3%B3n-ambiental-medidasadministrativas y https://datosabiertos.oefa.gob.pe/dashboards/20541/medidas-administrativas/ (requieren descarga y filtrado manual),64.8,9,no sabe
+medidas_loreto_2023,mcp,238.0,238.0,"OEFA, dataset Medidas administrativas de las direcciones de supervisión 2016-2025 (período 2023-01-06 a 2023-12-29)",15.5,3,acierta
+multas_mineria_2023,memoria,274.0,,No se pudo acceder a los datos — herramientas de archivo deshabilitadas en esta sesión,17.2,6,no sabe
+multas_mineria_2023,web,274.0,,No se encontró con certeza en fuentes públicas accesibles,96.5,13,no sabe
+multas_mineria_2023,mcp,274.0,274.0,"dataset ""Resoluciones con multa firme 2019-2025"" del portal de datos abiertos del OEFA",30.1,3,acierta
+multas_soles_2024,memoria,166.47,,No disponible - sin acceso a los datos del servidor MCP del OEFA,16.2,5,no sabe
+multas_soles_2024,web,166.47,,No se encontró cifra verificable. El dataset existe en datosabiertos.oefa.gob.pe (Resolución con multa firmes 2019-2025) pero requiere descargar y procesar los datos directamente.,68.1,9,no sabe
+multas_soles_2024,mcp,166.47,166.47,"Resoluciones con multa firme 2019-2025, OEFA. https://datosabiertos.oefa.gob.pe/dataviews/262240/resolucion-con-multa-firmes-2019-2025/",14.4,3,acierta
+rd_2024,memoria,1705.0,,desconocida — requiere consulta a datos abiertos del OEFA o base de datos local del proyecto tarea_4,10.2,2,no sabe
+rd_2024,web,1705.0,,"No determinado con certeza; data disponible en datosabiertos.oefa.gob.pe dataset ""Resoluciones directorales 2018-2025""",54.7,10,no sabe
+rd_2024,mcp,1705.0,,Portal de datos abiertos del OEFA - dataset resoluciones_directorals 2024 (no incluye campo de dirección emisora),25.2,5,no sabe
+tfa_2024,memoria,1044.0,,No encontré datos específicos sobre expedientes del Tribunal de Fiscalización Ambiental del OEFA en 2024 en los archivos accesibles del proyecto. Los datos disponibles en el servidor MCP de tarea 4 no contienen este indicador.,8.6,2,no sabe
+tfa_2024,web,1044.0,,No se pudo verificar el dato con certeza. Los sitios públicos (datosabiertos.gob.pe) no estuvieron disponibles en el momento de la consulta.,33.9,6,no sabe
+tfa_2024,mcp,1044.0,1044.0,https://datosabiertos.oefa.gob.pe/dataviews/262242/expedientes-resueltos-2021-2025/,14.6,3,acierta

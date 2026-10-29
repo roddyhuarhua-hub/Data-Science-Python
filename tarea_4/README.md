@@ -12,6 +12,9 @@ Code y `claude -p` mide cuántas cifras acierta Claude sin el servidor y cuánta
 | `preguntas.csv` | 10 preguntas con la cifra de referencia y la tolerancia; las marcadas `verificar_a_mano` se revisan en el portal |
 | `evaluar.py` | Le hace cada pregunta a Claude sin herramientas y con el MCP, y califica |
 | `.mcp.json` | Los servidores `oefa` y `fetch` |
+| `informe.md`, `grafico.png` | El informe de la evaluación: memoria 0/10, web 0/10, MCP 9/10 |
+| `resultados.csv`, `resultados_base.csv` | Corrida con memoria, web y MCP; y la corrida base con memoria y MCP |
+| `scripts/grafico.py` | Genera `grafico.png` desde `resultados.csv` |
 | `scripts/catalogo_oefa.py` | Arma `datos/catalogo_oefa_crudo.csv` con los 98 recursos del portal |
 | `scripts/perfil_datos.py` | Convierte los xlsx a CSV y escribe `datos/perfil_datos.md` |
 | `scripts/verdades.py` | Calcula con pandas, sin el servidor, las cifras de las pruebas y de las preguntas |

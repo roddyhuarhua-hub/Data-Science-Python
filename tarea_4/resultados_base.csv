@@ -1,0 +1,21 @@
+id,modo,verdad,valor,fuente,segundos,turnos,resultado
+sinada_cajamarca_2024,memoria,133.0,,No tengo acceso a las herramientas de archivo para consultar los datos del servidor MCP del OEFA en tarea_4,20.7,4,no sabe
+sinada_cajamarca_2024,mcp,133.0,133.0,"Denuncias SINADA 2019-2025, portal de datos abiertos del OEFA (https://datosabiertos.oefa.gob.pe/dataviews/262247/denuncias-sinada-2019-2025/)",33.8,3,acierta
+sinada_2024,memoria,3993.0,,No pude acceder a los datos locales del proyecto ni tengo información verificable sobre el número específico de denuncias del SINADA del OEFA en 2024.,20.2,4,no sabe
+sinada_2024,mcp,3993.0,3993.0,SINADA 2019-2025 - Datos Abiertos OEFA (https://datosabiertos.oefa.gob.pe/dataviews/262247/denuncias-sinada-2019-2025/),33.8,3,acierta
+sinada_lima_2023,memoria,1472.0,,No disponible - herramientas deshabilitadas,25.6,6,no sabe
+sinada_lima_2023,mcp,1472.0,1472.0,"Portal de Datos Abiertos del OEFA, dataset ""Denuncias SINADA 2019-2025"", período 2023-01-03 a 2023-12-29",20.0,3,acierta
+sinada_mineria_2024,memoria,442.0,,No accesible en esta sesión,23.6,6,no sabe
+sinada_mineria_2024,mcp,442.0,442.0,https://datosabiertos.oefa.gob.pe/dataviews/262247/denuncias-sinada-2019-2025/ — resumen SINADA 2024 agrupado por subsector,20.5,5,acierta
+supervision_2023,memoria,6096.0,,No accesible sin permisos de lectura de archivos locales,26.2,6,no sabe
+supervision_2023,mcp,6096.0,,"Dataset ""Informes de la Dirección de Supervisión 2019-2025"" del OEFA (clave: supervision) — contiene 6,096 registros en 2023, pero sin información sobre estado de aprobación",33.9,6,no sabe
+medidas_loreto_2023,memoria,238.0,,No accesible: herramientas de archivo deshabilitadas en la sesión,20.3,7,no sabe
+medidas_loreto_2023,mcp,238.0,238.0,"OEFA, Portal de Datos Abiertos: Medidas administrativas de las direcciones de supervisión 2016-2025 (período 2023-01-06 a 2023-12-29)",19.0,3,acierta
+multas_mineria_2023,memoria,274.0,,No se pudo acceder a los datos del OEFA en tarea_4 (herramientas de archivo deshabilitadas),16.5,5,no sabe
+multas_mineria_2023,mcp,274.0,274.0,"Dataset ""Resoluciones con multa firme 2019-2025"" del OEFA, subsector MINERIA, año 2023. https://datosabiertos.oefa.gob.pe/dataviews/262240/resolucion-con-multa-firmes-2019-2025/",21.9,3,acierta
+multas_soles_2024,memoria,166.47,,No tengo acceso a los archivos del proyecto (las herramientas están deshabilitadas) ni datos específicos verificables sobre multas firmes del OEFA en 2024 en mi entrenamiento,20.9,6,no sabe
+multas_soles_2024,mcp,166.47,166.47,"Dataset «Resoluciones con multa firmes 2019-2025» del OEFA (datosabiertos.oefa.gob.pe), período 2024, suma de monto en soles: 166,468,409.96",20.3,3,acierta
+rd_2024,memoria,1705.0,,"No es posible acceder a los datos del proyecto ni a fuentes públicas verificables en tiempo real del OEFA. Sin acceso a los archivos del servidor MCP de datos abiertos del OEFA que menciona el proyecto, no puedo confirmar esta cifra con certeza.",29.6,10,no sabe
+rd_2024,mcp,1705.0,,"No es posible determinar. El dataset de resoluciones directorales 2024 (total de 1705 registros) no incluye un campo que identifique cuál dirección del OEFA emitió cada resolución. La descripción menciona análisis de la DFAI, pero sin confirmar si todas o solo algunas de esas resoluciones fueron emitidas por esa dirección específica.",37.6,8,no sabe
+tfa_2024,memoria,1044.0,,No accesible sin poder leer los archivos de datos del OEFA del proyecto tarea_4,24.3,7,no sabe
+tfa_2024,mcp,1044.0,1044.0,datosabiertos.oefa.gob.pe - Expedientes resueltos por el Tribunal de Fiscalización Ambiental 2021-2025,23.3,3,acierta
