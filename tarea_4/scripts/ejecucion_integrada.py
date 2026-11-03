@@ -25,7 +25,9 @@ RAIZ = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(RAIZ / "scripts"))
 from transcripcion_a_md import main as a_markdown  # noqa: E402
 
-PEDIDO = """Pregunta de investigación: en 2024, con precios altos del cobre y del oro, ¿los departamentos que más
+PEDIDO = """Invoca cada skill con la herramienta Skill (limpiando-enaho, graficando-enaho, mapeando-enaho), no leyendo su SKILL.md a mano.
+
+Pregunta de investigación: en 2024, con precios altos del cobre y del oro, ¿los departamentos que más
 cobre producen tienen menos pobreza monetaria que el resto del Perú?
 
 Responde con datos, en este orden, y sin hacer cuentas a mano:
@@ -34,8 +36,10 @@ Responde con datos, en este orden, y sin hacer cuentas a mano:
    (LME) de 2015-01 a 2024-12.
 2. Con el MCP bcrp: produccion_minera_departamental de cobre en 2024. Define como «departamentos cupríferos» los
    cinco con más producción y anota su código ccdd.
-3. Con la skill limpiando-enaho: la base de la ENAHO 2024 validada. Si la validación falla, detente y dilo.
-4. Con la skill mapeando-enaho: el mapa de pobreza por departamento. Con la skill graficando-enaho: el gráfico de
+3. Invoca la skill limpiando-enaho con la herramienta Skill: la base de la ENAHO 2024 validada. Si la validación
+   falla, detente y dilo.
+4. Invoca la skill mapeando-enaho con la herramienta Skill: el mapa de pobreza por departamento. Invoca la skill
+   graficando-enaho con la herramienta Skill: el gráfico de
    pobreza por departamento y el de área urbana y rural.
 5. Con uv run python sobre salidas/personas_2024.parquet (ponderando con facpob07): la pobreza monetaria de los
    cinco departamentos cupríferos juntos, la del resto del país, y la de cada uno de los cinco.
@@ -74,8 +78,9 @@ def main() -> None:
 
     cmd = [ruta_claude(), "-p", PEDIDO, "--output-format", "stream-json", "--verbose", "--model", a.modelo,
            "--strict-mcp-config", "--mcp-config", ".mcp.json",
+           "--tools", "Bash,Read,Write,Edit,Glob,Grep,Skill",
            "--allowedTools", "mcp__bcrp,Skill,Bash,Read,Write,Edit,Glob,Grep"]
-    entorno = dict(os.environ, UV_PROJECT_ENVIRONMENT=str(RAIZ / ".venv"))
+    entorno = dict(os.environ, UV_PROJECT_ENVIRONMENT=os.environ.get("UV_PROJECT_ENVIRONMENT", str(RAIZ / ".venv")))
     print(f"Corriendo en {carpeta} con {a.modelo} (tarda unos minutos)...", flush=True)
     t0 = time.time()
     proc = subprocess.run(cmd, cwd=carpeta, capture_output=True, text=True, encoding="utf-8", errors="replace",

@@ -82,7 +82,7 @@ def preguntar(q, modo: str, modelo: str) -> dict:
     cmd = [ruta_claude(), "-p", INSTRUCCION + q.pregunta, "--output-format", "stream-json", "--verbose",
            "--json-schema", json.dumps(ESQUEMA), "--no-session-persistence", "--model", modelo, *MODOS[modo]]
     entorno = dict(os.environ)
-    entorno["UV_PROJECT_ENVIRONMENT"] = str(RAIZ / ".venv")      # reutiliza el entorno: no reinstala en cada copia
+    entorno.setdefault("UV_PROJECT_ENVIRONMENT", str(RAIZ / ".venv"))  # reutiliza el entorno: no reinstala en cada copia
     t0 = time.time()
     error = ""
     try:
