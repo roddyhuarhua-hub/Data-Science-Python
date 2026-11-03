@@ -125,8 +125,8 @@ es terreno de conflicto.
 
 | # | Afirmación | Valor del agente | Verificación | Fuente / procedimiento | ¿Coincide? |
 |---|---|---|---|---|---|
-| 1 | Precio promedio del cobre LME 2024 | 414.62 ¢US$/lb | 414.62 | Web del BCRP, tabla anual [PM05568XA](https://estadisticas.bcrp.gob.pe/estadisticas/series/anuales/resultados/PM05568XA/html), revisada a mano; también `scripts/verdades.py` (API directa) | PENDIENTE de revisión manual |
-| 2 | Producción de cobre de Apurímac 2024 | 321,527.1 tm.f | 321,527.1 | Web del BCRP, tabla anual [RD15518DA](https://estadisticas.bcrp.gob.pe/estadisticas/series/anuales/resultados/RD15518DA/html); también prueba automática con datos reales | PENDIENTE de revisión manual |
+| 1 | Precio promedio del cobre LME 2024 | 414.62 ¢US$/lb | 414.62 | Web del BCRP, tabla anual [PM05568XA](https://estadisticas.bcrp.gob.pe/estadisticas/series/anuales/resultados/PM05568XA/html), revisada a mano; también `scripts/verdades.py` (API directa) | **Sí**, revisado a mano el 3-11-2026: la web muestra 414,62 |
+| 2 | Producción de cobre de Apurímac 2024 | 321,527.1 tm.f | 321,527.1 | Web del BCRP, tabla anual [RD15518DA](https://estadisticas.bcrp.gob.pe/estadisticas/series/anuales/resultados/RD15518DA/html); también prueba automática con datos reales | **Sí**, revisado a mano el 3-11-2026: la web muestra 321527 ([captura](../evidencias_ia/verificacion/bcrp_RD15518DA_apurimac_cobre.png)) |
 | 3 | Pobreza monetaria nacional 2024 | 27.58 % (sumaria) · 27.53 % (personas) | 27.6 % | INEI, cifra oficial de pobreza monetaria 2024; diferencia −0.02 puntos | Sí (tolerancia 0.1) |
 | 4 | Pobreza de Cajamarca 2024 | 44.99 % | 45.0 % | Referencia del curso (`sessions/16-skills-enaho/referencias`) y `verdades.py` con la sumaria: 45.01 % | Sí |
 | 5 | Pobreza conjunta de los 5 grandes productores | 19.75 % (personas, `facpob07`) | 19.74 % | `verdades.py`: otro camino (API directa del BCRP + sumaria ponderada por hogar) | Sí, diferencia 0.01 |

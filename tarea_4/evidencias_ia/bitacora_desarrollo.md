@@ -18,7 +18,7 @@ quedó la evidencia de cada paso. Los commits de la rama `tarea-4-agente` permit
 | 9 | 11:40 | Laptop, evaluación | 20 corridas con Sonnet: sin 4/10, con 9/10 | q06 falló por ponderación (39.4 vs 39.3). **No** se cambió la tolerancia tras ver el resultado | `evaluacion/*.jsonl` · `evaluacion/resultados.csv` |
 | 10 | 12:00 | Informe y README | Escribió `comparacion.md`, `informe_final.md` (a partir del borrador del agente, con cifras verificadas) y el README de 12 secciones | Se suavizaron afirmaciones que no salían de los datos (sin causalidad) | commits `4f15704`, `c0f1ed7` |
 | 11 | 12:10 | Laptop, análisis y evidencias | `analisis_minero.py` (cobre y oro vs pobreza), invocación manual de skills, recurso y prompt MCP | Git Bash convertía `/graficando-enaho` en una ruta: se repitió con `MSYS_NO_PATHCONV=1` | commit `57f5ad1` · `skills/` · `mcp/` |
-| 12 | — | Verificación manual | PENDIENTE: revisar a mano en la web del BCRP el precio del cobre 2024 y la producción de Apurímac 2024 | — | Informe §5 |
+| 12 | 20:06 | Verificación manual | Revisé a mano en la web del BCRP: cobre LME 2024 = 414,62 ¢US$/lb (PM05568XA) y cobre de Apurímac 2024 = 321527 tm.f (RD15518DA). Coinciden con el agente | — | Informe §5 · `verificacion/` |
 
 **Revisión antes de publicar.** En cada commit se buscaron claves y datos personales (`sk-ant`, `api_key`,
 `token`, `Bearer`, `password`, correo): ninguna coincidencia. Los microdatos del INEI no se suben.
