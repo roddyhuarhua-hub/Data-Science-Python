@@ -206,8 +206,8 @@ revisó que no hubiera claves, tokens ni datos personales.
 | Carpeta | Qué contiene |
 |---|---|
 | [`evidencias_ia/historial_desarrollo.md`](evidencias_ia/historial_desarrollo.md) | El historial de la sesión de Claude Code que escribió el servidor MCP, las pruebas, las skills, los scripts, el informe y este README, con mis pedidos, cada herramienta usada y los reportes de las corridas en mi laptop |
-| [`evidencias_ia/mcp/`](evidencias_ia/mcp/) | Salida de las 10 pruebas y uso del recurso y del prompt desde Claude Code |
-| [`evidencias_ia/skills/`](evidencias_ia/skills/) | Invocación manual de skills (`/graficando-enaho`, `/mapeando-enaho`) |
+| [`evidencias_ia/mcp/`](evidencias_ia/mcp/) | Salida de las 10 pruebas; uso del recurso `bcrp://serie/PM05568XA` y del prompt `/mcp__bcrp__informe precio del cobre` desde Claude Code |
+| [`evidencias_ia/skills/`](evidencias_ia/skills/) | Invocación manual de skills (`/graficando-enaho sexo`, `/mapeando-enaho`). Con `claude -p`, el slash se expande dentro del pedido: la prueba es la lista `slash_commands` del inicio y los scripts que corre desde la carpeta de la skill. La invocación por lenguaje natural con la herramienta `Skill` está en `integracion/` y en la evaluación |
 | [`evidencias_ia/integracion/`](evidencias_ia/integracion/) | La ejecución completa de la Parte 3 (`.jsonl` original y `.md` legible) |
 | [`evidencias_ia/evaluacion/`](evidencias_ia/evaluacion/) | Las 20 transcripciones de la evaluación, una por pregunta y modo |
 

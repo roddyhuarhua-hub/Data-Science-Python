@@ -78,12 +78,19 @@ Apurímac (24.1 %) están apenas 3 a 5 puntos por debajo del promedio nacional. 
 producción de cobre tienen pobreza alta: **Cajamarca 45.0 %**, la más alta del país, y **Pasco 39.3 %**. Y el
 departamento con menos pobreza, **Ica (5.9 %)**, es el octavo productor. Si se toman los 15 departamentos con
 alguna producción de cobre, su pobreza (27.1 %) es casi igual a la de los 10 sin cobre (28.6 %): la diferencia del
-hallazgo 2 está concentrada en los productores más grandes, no en «ser minero».
+hallazgo 2 está concentrada en los productores más grandes, no en «ser minero». La correlación de rangos entre
+producción de cobre y pobreza en los 25 departamentos es negativa pero débil (Spearman −0.33).
+
+Con el oro el patrón es aún menos claro. Los tres mayores productores de oro en 2024 fueron **La Libertad** (32.8 %
+del oro del país; pobreza 30.1 %), **Arequipa** (21.0 %; 15.8 %) y **Cajamarca** (19.1 %; 45.0 %) (BCRP, series
+RD15543DA a RD15560DA, en gramos finos). Es decir, dos de los tres grandes productores de oro tienen pobreza igual o
+mayor que el promedio nacional.
 
 ![Figura 2. Producción de cobre y pobreza por departamento](../figuras/cobre_vs_pobreza_2024.png)
 
 *Figura 2. Producción de cobre 2024 (BCRP) y pobreza monetaria 2024 (ENAHO) por departamento; el tamaño del punto es
-la población. Fuente: `scripts/analisis_minero.py`.*
+la población. Tabla completa, con cobre y oro: [`salidas/mineria_pobreza_2024.csv`](../salidas/mineria_pobreza_2024.csv).
+Fuente: `scripts/analisis_minero.py`.*
 
 ### Hallazgo 4. El mapa de la pobreza sigue la sierra norte, la selva y el altiplano, no el corredor del cobre
 
@@ -140,7 +147,7 @@ corrió los scripts sin invocar la herramienta Skill; se repitió pidiendo invoc
 - **Escala departamental.** La pobreza de los distritos mineros puede ser muy distinta de la de su departamento.
 - **Producción absoluta.** El grupo se definió por toneladas, no por el peso de la minería en la economía regional
   (el PBI departamental del BCRP solo llega a 2023).
-- **Solo cobre en el ranking.** El oro y otros metales se describen pero no se usan para agrupar.
+- **Solo cobre en el ranking.** El oro se describe (hallazgo 3) pero no se usa para agrupar; otros metales no se analizan.
 - **Error muestral.** No se calcularon intervalos de confianza; las diferencias de 1 a 3 puntos entre departamentos
   (por ejemplo Áncash, Tacna y Apurímac) pueden no ser significativas.
 - **Ponderación.** Las cifras por persona (`facpob07`) difieren algunas décimas de las oficiales por hogar.

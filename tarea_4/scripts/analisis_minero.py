@@ -89,9 +89,9 @@ def main() -> None:
     ax.spines[["top", "right"]].set_visible(False)
     ax.set_title("Los grandes productores de cobre tienen menos pobreza, pero no todos", loc="left",
                  fontsize=12, fontweight="bold")
-    fig.text(0.01, 0.01, "Fuente: BCRP, producción de cobre por departamento (RD15516DA-RD15532DA, MINEM); INEI, "
+    fig.text(0.01, 0.01, "Fuente: BCRP, producción de cobre por departamento (RD15516DA-RD15532DA, MINEM);\nINEI, "
              "ENAHO 2024 ponderada con facpob07. El tamaño del punto es la población.", fontsize=7.5, color="#555555")
-    fig.tight_layout(rect=(0, 0.04, 1, 1))
+    fig.tight_layout(rect=(0, 0.06, 1, 1))
     fig.savefig(RAIZ / "figuras" / "cobre_vs_pobreza_2024.png", dpi=200)
     print("\nsalidas/mineria_pobreza_2024.csv · figuras/cobre_vs_pobreza_2024.png")
 
