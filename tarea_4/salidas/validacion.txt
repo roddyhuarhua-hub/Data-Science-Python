@@ -1,0 +1,31 @@
+Validación ENAHO 2024 · limpiando-enaho
+Archivos: 966-Modulo34.zip (sumaria) y 966-Modulo02.zip (miembros)
+
+Hogares en la sumaria:       33,691
+Filas del módulo 02:         117,721
+Residentes habituales:       108,664
+Población expandida:         34,482,700 personas
+Pobreza monetaria (sumaria): 27.58 %
+Pobreza monetaria (personas): 27.53 %
+Pobreza extrema (sumaria):   5.50 %
+Pobreza extrema (personas):  5.50 %
+Urbano / rural (sumaria):    24.81 % / 39.30 %
+
+Chequeos
+  [OK] Llaves de hogar únicas en la sumaria: conglome, vivienda, hogar
+  [OK] Llaves de persona únicas: conglome, vivienda, hogar, codperso
+  [OK] La unión no perdió ni duplicó filas: 108,664 filas en la base = 108,664 residentes
+  [OK] Todas las personas tienen hogar en la sumaria: 0 personas sin hogar
+  [OK] Ubigeo con 6 dígitos: 25 departamentos
+  [OK] 25 códigos territoriales (Lima 15 y Callao 07 separados): 25 códigos: 01, 02, 03, 04, 05, 06, 07, 08, 09, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25
+  [OK] Factores de expansión completos y positivos: 0 personas sin facpob07
+  [OK] Hogares en la sumaria: 33,691 (INEI: 33,691)
+  [OK] Filas del módulo 02: 117,721 (INEI: 117,721)
+  [OK] Residentes habituales: 108,664 (esperado: 108,664)
+  [OK] Pobreza monetaria, sumaria (factor07 × mieperho): 27.58 % (INEI: 27.6 %, diferencia -0.02)
+  [OK] Pobreza monetaria, personas (facpob07): 27.53 % (INEI: 27.6 %, diferencia -0.07)
+  [OK] Pobreza extrema, sumaria: 5.50 % (INEI: 5.5 %, diferencia +0.00)
+  [OK] Pobreza urbana, sumaria: 24.81 % (INEI: 24.8 %, diferencia +0.01)
+  [OK] Pobreza rural, sumaria: 39.30 % (INEI: 39.3 %, diferencia +0.00)
+
+RESULTADO: TODO OK, la base replica al INEI
