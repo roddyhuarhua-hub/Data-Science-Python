@@ -21,6 +21,9 @@ Issues propios: #1 (recolección), #2 (etiquetado con LLM), #3 (clasificador y d
 | D8 | 13 oct | Entorno de trabajo fuera de OneDrive | OneDrive sincroniza miles de archivos de un entorno virtual y rompe enlaces físicos | #2 |
 | D9 | 13 oct | Seguir enlaces entre notas de La República (con tope por sección) | Tras la 2.ª corrida seguía en 85 de 200; el RSS no iba a alcanzar | #3 |
 | D10 | 13-14 oct | No rotar ni revocar la clave de API | Quedó visible en la sesión de trabajo; solo la tiene el equipo y vence el 12 nov | — |
+| D13 | 3 nov | Completar `etiquetas_llm.csv` (titular, confianza, modelo_llm, fecha) **sin cambiar las etiquetas** | Retroalimentación del docente; cambiar etiquetas movería el split y el F1 | #2 |
+| D14 | 3 nov | Respaldo de datos crudos en `datos/raw/` | Retroalimentación del docente; antes solo se guardaba el CSV limpio | #1 |
+| D15 | 3 nov | Dashboard completo: barra lateral, filtros, métricas, gráficos, tabla, descarga y botón | Retroalimentación del docente: la app era mínima | #3 |
 
 ## Detalle
 
@@ -156,6 +159,43 @@ Re-entrenado con 436 / 110: F1 macro **0.921** (BETO ajustado) frente a **0.700*
 con fechas de 2021 a 2026 (40 de 249 anteriores a julio de 2026). Se mantienen porque el
 enunciado no fija rango de fechas, y se reportan como limitación.
 
+### D13 · Columnas de `etiquetas_llm.csv` y confianza del LLM
+
+**Retroalimentación:** el CSV solo tenía `url` y `etiqueta_llm`; debía incluir `titular`,
+`confianza`, `modelo_llm` y `fecha`.
+
+- `titular` se copia de `noticias.csv` por URL; `modelo_llm` es `claude-haiku-5-5` (D6).
+- `fecha` es el día de etiquetado. Las filas se agregan al final del CSV, así que se reconstruye
+  con el historial de git: filas 1-274 entraron el 13 de octubre (commits `1e1cc78` y `f3f2790`)
+  y 275-562 el 14 de octubre (`621a108` y `506d9a9`).
+- `confianza`: la API de Claude no entrega probabilidades, así que se pide una **confianza
+  verbalizada**: se muestra al mismo modelo la noticia y la etiqueta que ya tiene, y responde
+  un número de 0 a 1. Se hace en una pasada aparte (`scripts/completar_etiquetas.py`).
+
+**Por qué no re-etiquetar todo:** pedir etiqueta y confianza juntas podría cambiar algunas etiquetas,
+y con ellas el split 70/15/15 y el F1 de 0.93 ya revisado. La etiqueta se deja fija.
+
+**Limitación:** la confianza verbalizada de un LLM no es una probabilidad calibrada; sirve para
+ordenar y filtrar casos dudosos (el dashboard tiene un filtro por confianza mínima).
+
+### D14 · Respaldo de datos crudos
+
+**Retroalimentación:** faltaba `datos/raw/`.
+
+- `scripts/respaldar_raw.py` guarda los 9 feeds RSS tal cual llegan, con un manifiesto
+  (URL, hora, código HTTP, bytes, `sha256`). No toca `noticias.csv`.
+- `descargar_feed` del notebook 01 ahora también guarda cada respuesta en `datos/raw/AAAA-MM-DD/`.
+
+**Limitación:** las respuestas del 13 y 14 de octubre no se guardaron y los feeds ya rotaron;
+no se pueden recuperar. El estado de los datos en esas fechas queda en el historial de git.
+
+### D15 · Dashboard completo
+
+**Retroalimentación:** la app era mínima (sin barra lateral, filtros, métricas, gráfico, tabla,
+descarga ni botón). Se rehízo `app.py` con dos pestañas: **Explorar** (filtros en la barra lateral,
+4 métricas, 3 gráficos, tabla con enlaces y descarga CSV) y **Clasificar** (formulario con botón).
+El modelo se carga solo al pulsar el botón; si faltan los pesos, la app lo avisa en vez de fallar.
+
 ## Pendiente
 
 - [x] Etiquetar con el LLM las notas nuevas de La República (399 de 399; coincidencia con la sección 90.23 %, 9 `otra`)
@@ -164,3 +204,4 @@ enunciado no fija rango de fechas, y se reportan como limitación.
 - [x] Seguir acumulando notas por RSS en más de un día, hasta superar 200 + 200 **utilizables** (sin `otra`), y volver a entrenar (D12)
 - [x] `app.py` funcionando y README con métricas
 - [x] ~~Revocar la clave de API tras la entrega~~: el usuario decidió no revocarla (14 oct); la clave solo la tiene el equipo (D10)
+- [x] Retroalimentación del docente (3 nov): dashboard completo (D15), columnas de `etiquetas_llm.csv` (D13) y `datos/raw/` (D14)

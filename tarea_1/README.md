@@ -10,8 +10,11 @@ Autor: Roddy Huarhua (@roddyhuarhua-hub) · Opción C (comparada): 200 de La Rep
 |---|---|
 | `01_recoleccion.ipynb` | Lectura de feeds RSS, limpieza, CSV con 7 columnas y tres gráficos |
 | `02_clasificacion.ipynb` | Etiquetado con LLM, validación humana, zero-shot y fine-tuning |
-| `app.py` | Dashboard en Streamlit |
+| `app.py` | Dashboard en Streamlit: filtros, métricas, gráficos, tabla, descarga y botón de predicción |
+| `scripts/completar_etiquetas.py` | Completa `etiquetas_llm.csv` con `titular`, `confianza`, `modelo_llm` y `fecha` |
+| `scripts/respaldar_raw.py` | Guarda las respuestas RSS crudas en `datos/raw/` |
 | `datos/` | `noticias.csv`, `etiquetas_llm.csv`, muestras de revisión humana y el split (`entrenamiento`, `validacion`, `prueba`) |
+| `datos/raw/` | Respaldo de datos crudos: RSS tal cual llegó, con manifiesto y huella `sha256` |
 | `modelo/` | Configuración y tokenizador del modelo (sin los pesos, ver abajo) |
 | `BITACORA.md` | Decisiones tomadas, con su evidencia |
 
@@ -23,6 +26,35 @@ streamlit run app.py
 ```
 
 Para etiquetar con el LLM hace falta una clave de Anthropic en un archivo `.env`: `ANTHROPIC_API_KEY=...`
+
+Orden completo, desde la carpeta `tarea_1`:
+
+1. `01_recoleccion.ipynb`: titulares a `datos/noticias.csv` (y respuestas crudas a `datos/raw/`).
+2. `02_clasificacion.ipynb`: etiquetas del LLM, validación humana, split, zero-shot y fine-tuning.
+3. `python scripts/completar_etiquetas.py`: confianza del LLM y columnas de trazabilidad.
+4. `python scripts/respaldar_raw.py` (opcional): foto cruda de los 9 feeds del día.
+5. `streamlit run app.py`.
+
+### El dashboard (`app.py`)
+
+- **Barra lateral:** filtros por medio, categoría, rango de fechas, confianza mínima del LLM y búsqueda en el titular.
+- **Métricas:** titulares filtrados, coincidencia sección vs. LLM, confianza media del LLM y F1 macro del modelo.
+- **Gráficos:** titulares por categoría y medio, coincidencia sección vs. LLM y distribución de la confianza.
+- **Tabla y descarga:** los titulares filtrados con enlace a la nota, descargables en CSV.
+- **Predicción:** se escribe un titular y el botón **Clasificar** muestra la categoría y la probabilidad de cada una.
+
+Los pesos del modelo no están en GitHub (superan 100 MB); sin ellos el dashboard funciona y solo la predicción pide entrenar antes con el notebook 02.
+
+### `datos/etiquetas_llm.csv`
+
+| Columna | Qué es |
+|---|---|
+| `url` | Identificador de la nota (une con `noticias.csv`) |
+| `titular` | Titular que vio el LLM |
+| `etiqueta_llm` | Categoría que asignó el LLM (`otra` si no encaja) |
+| `confianza` | De 0 a 1: qué tan seguro dice estar el LLM de esa etiqueta (ver `BITACORA.md`, D13) |
+| `modelo_llm` | Modelo que etiquetó: `claude-haiku-5-5` |
+| `fecha` | Día en que se etiquetó la nota (13 o 14 de octubre de 2026, según el historial de git) |
 
 ## Datos
 
