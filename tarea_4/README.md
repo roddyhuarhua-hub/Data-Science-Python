@@ -147,16 +147,79 @@ uv run evaluacion/evaluar.py            # 10 preguntas × 2 modos (claude -p)
 
 ## 9. Resultados de la evaluación
 
-PENDIENTE
+Diez preguntas con respuesta fijada de antemano ([`evaluacion/preguntas.csv`](evaluacion/preguntas.csv)): 4 del
+BCRP, 4 de la ENAHO y 2 combinadas. Mismo modelo (Sonnet), misma instrucción y una sesión nueva por pregunta.
+
+| Modo | Correctas | Incorrectas | Sin respuesta | Segundos promedio |
+|---|---|---|---|---|
+| Sin MCP/Skills (carpeta vacía, sin herramientas) | **4/10** | 1 | 5 | 11.6 |
+| Con MCP/Skills (copia limpia del proyecto) | **9/10** | 1 | 0 | 20.6 |
+
+Mejoraron con las herramientas q03, q04, q08, q09 y q10: cálculos, datos por departamento y cruces de fuentes. q06
+(pobreza rural) falló en ambos: el agente con skills dio 39.4 % (ponderación por persona) en vez del 39.3 % oficial
+(ponderación por hogar), por fuera de la tolerancia de 0.1. Detalle, tiempos y análisis:
+[`evaluacion/comparacion.md`](evaluacion/comparacion.md) · tabla completa:
+[`evaluacion/resultados.csv`](evaluacion/resultados.csv).
 
 ## 10. Limitaciones y problemas encontrados
 
-PENDIENTE
+- **Red.** Los portales del INEI y del BCRP bloquean descargas desde servidores en la nube: las pruebas, la limpieza
+  y las corridas de `claude -p` se hicieron en mi laptop. Los zip del INEI se bajan a mano.
+- **API del BCRP.** A veces responde con una página HTML (control antibots) en vez de JSON: el servidor reintenta con
+  pausas, guarda en caché y pide varias series en una sola llamada. Al pedir varias series, la API las devuelve en
+  su propio orden: la herramienta propia asigna cada valor por el nombre de la serie, no por la posición.
+- **Nombres sin tildes en el BCRP** («Apurimac», «Ancash»): por eso se une por código `ccdd`.
+- **Dos ponderaciones de la ENAHO.** Por hogar replica la cifra oficial; por persona difiere algunas décimas (causa
+  del error en q06).
+- **El agente no siempre usa sus herramientas.** En la primera ejecución integrada leyó los SKILL.md y corrió los
+  scripts sin invocar la herramienta Skill; en la evaluación respondió q05 de memoria. Se repitió la ejecución
+  pidiendo invocar las skills de forma explícita.
+- **OneDrive.** En Windows, `.venv` dentro de OneDrive queda bloqueado; se usó `UV_PROJECT_ENVIRONMENT` fuera de
+  OneDrive (los scripts lo respetan).
+- **Análisis.** Descriptivo, un solo año, nivel departamental, sin intervalos de confianza (ver informe).
 
 ## 11. Ejemplo de una ejecución completa
 
-PENDIENTE
+`uv run scripts/ejecucion_integrada.py` le hace a Claude Code (Sonnet) **un solo pedido** con la pregunta de
+investigación, en una copia limpia del proyecto. Herramientas que usó, en orden
+([transcripción completa](evidencias_ia/integracion/ejecucion.md)):
+
+```text
+mcp__bcrp__buscar_series ×3          → encuentra PM05568XA (cobre), PM05570XA (oro), PN01652XM (cobre mensual)
+mcp__bcrp__produccion_minera_departamental("cobre", 2024)  → ranking con ccdd: Moquegua, Arequipa, Áncash...
+mcp__bcrp__resumen ×2, mcp__bcrp__serie ×2 → precios 2023 y 2024 (PM05568XA, PM05570XA)
+mcp__bcrp__graficar_serie            → figuras/bcrp_PN01652XM_2015-01_2024-12.png
+Skill: limpiando-enaho  → Bash ×2     → salidas/validacion.txt: TODO OK
+Skill: mapeando-enaho   → Bash, Read  → mapas/pobreza_departamento.png (25/25)
+Skill: graficando-enaho → Bash        → figuras/pobre_por_departamento_2024.png, pobre_por_area_2024.png
+Bash (uv run python)                  → pobreza de los 5 productores juntos: 19.7 % contra 28.5 % del resto
+Bash                                  → informes/borrador_agente.md
+```
+
+El resultado revisado y verificado es [`informes/informe_final.md`](informes/informe_final.md).
 
 ## 12. Evidencias de uso de IA
 
-PENDIENTE
+Todo el proyecto se hizo con Claude Code (opción B del issue: historial completo exportado). Antes de publicar se
+revisó que no hubiera claves, tokens ni datos personales.
+
+| Carpeta | Qué contiene |
+|---|---|
+| [`evidencias_ia/historial_desarrollo.md`](evidencias_ia/historial_desarrollo.md) | El historial de la sesión de Claude Code que escribió el servidor MCP, las pruebas, las skills, los scripts, el informe y este README, con mis pedidos, cada herramienta usada y los reportes de las corridas en mi laptop |
+| [`evidencias_ia/mcp/`](evidencias_ia/mcp/) | Salida de las 10 pruebas y uso del recurso y del prompt desde Claude Code |
+| [`evidencias_ia/skills/`](evidencias_ia/skills/) | Invocación manual de skills (`/graficando-enaho`, `/mapeando-enaho`) |
+| [`evidencias_ia/integracion/`](evidencias_ia/integracion/) | La ejecución completa de la Parte 3 (`.jsonl` original y `.md` legible) |
+| [`evidencias_ia/evaluacion/`](evidencias_ia/evaluacion/) | Las 20 transcripciones de la evaluación, una por pregunta y modo |
+
+## Estructura
+
+```text
+tarea_4/
+  README.md  pyproject.toml  uv.lock  .mcp.json  .gitignore
+  mcp/            server.py · test_server.py (8 del curso, sin cambios) · test_propias.py (2 propias)
+  .claude/skills/ limpiando-enaho/ · graficando-enaho/ · mapeando-enaho/
+  scripts/        verdades.py · analisis_minero.py · ejecucion_integrada.py · transcripcion_a_md.py
+  datos/          (no se sube) zip del INEI, catálogo del BCRP, geojson
+  salidas/        validacion.txt · indicadores.csv · mineria_pobreza_2024.csv
+  figuras/  mapas/  informes/  evaluacion/  evidencias_ia/  referencias/
+```
