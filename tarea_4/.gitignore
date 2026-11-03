@@ -1,0 +1,11 @@
+# Microdatos del INEI, catálogo del BCRP y límites: cada uno los baja (ver README)
+datos/
+# Base limpia: se regenera con la skill limpiando-enaho
+salidas/*.parquet
+# Copias temporales y transcripciones pesadas de la evaluación
+evaluacion/corridas/*/transcripcion.jsonl
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.claude/settings.local.json

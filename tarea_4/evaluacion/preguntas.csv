@@ -1,0 +1,11 @@
+id,tipo,pregunta,verdad,tolerancia,verdad2,tolerancia2,unidad,fuente_verdad
+q01,bcrp,"¿Cuál fue el precio promedio del cobre (LME) en 2024 según el BCRP, en centavos de US$ por libra?",414.62,0.5,,,¢US$/lb,BCRP serie anual PM05568XA (2024)
+q02,bcrp,"¿Cuál fue el precio promedio del oro (LBMA) en 2024 según el BCRP, en US$ por onza troy?",2387.98,2,,,US$/oz troy,BCRP serie anual PM05570XA (2024)
+q03,bcrp,"¿En qué porcentaje subió el precio promedio anual del cobre (LME) en 2024 frente a 2023 según el BCRP?",7.76,0.1,,,%,BCRP PM05568XA: 414.62 / 384.77 - 1
+q04,bcrp,"¿Cuántas toneladas métricas finas de cobre produjo el departamento de Apurímac en 2024 según el BCRP?",321527.1,500,,,tm.f,BCRP serie anual RD15518DA (MINEM)
+q05,enaho,"Según la ENAHO 2024 del INEI, ¿qué porcentaje de la población del Perú estaba en pobreza monetaria en 2024?",27.6,0.1,,,%,INEI cifra oficial 2024
+q06,enaho,"Según la ENAHO 2024 del INEI, ¿cuál fue la tasa de pobreza monetaria en el área rural del Perú en 2024, en %?",39.3,0.1,,,%,INEI cifra oficial 2024
+q07,enaho,"Según la ENAHO 2024 del INEI, ¿qué porcentaje de la población del Perú estaba en pobreza extrema en 2024?",5.5,0.1,,,%,INEI cifra oficial 2024
+q08,enaho,"Según la ENAHO 2024 del INEI, ¿cuál fue la tasa de pobreza monetaria del departamento de Cajamarca en 2024, en %?",45.0,0.5,,,%,Referencia del curso sessions/16-skills-enaho/referencias/pobreza_departamento_2024.csv
+q09,combinada,"Según el BCRP, ¿qué departamento produjo más cobre en 2024? Da en «valor» su tasa de pobreza monetaria 2024 según la ENAHO del INEI (en %) y en «valor2» su producción de cobre 2024 en toneladas métricas finas.",,0.5,,1000,% y tm.f,BCRP produccion por departamento (RD155..DA) + ENAHO 2024; calculado con scripts/verdades.py
+q10,combinada,"Toma los cinco departamentos que más cobre produjeron en 2024 según el BCRP. ¿Qué porcentaje de su población total (los cinco juntos) estaba en pobreza monetaria en 2024 según la ENAHO del INEI? Pondera por población, no promedies las tasas.",,0.3,,,%,BCRP ranking RD155..DA + ENAHO 2024 ponderada; calculado con scripts/verdades.py
