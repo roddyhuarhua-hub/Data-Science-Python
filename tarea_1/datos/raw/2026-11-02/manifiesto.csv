@@ -1,0 +1,10 @@
+archivo,medio,feed,url,descargado,http,bytes,sha256
+rss_larepublica_home.xml,larepublica,home,https://larepublica.pe/rss/home.xml,2026-11-02T22:23:38,200,1450464,5a8e71642468dcfded8d10caac9f0bf96e7f49902ce709be0c2534601aad0eb5
+rss_larepublica_politica.xml,larepublica,politica,https://larepublica.pe/rss/politica.xml,2026-11-02T22:23:40,200,237068,1e24535367584259b267596545f5260305dd4a087c23d5261abd4f270a8f6747
+rss_larepublica_economia.xml,larepublica,economia,https://larepublica.pe/rss/economia.xml,2026-11-02T22:23:42,200,75316,d118702f79fb6871665e84d623fdcd2c0f57608ea1b1c3fe6c73cea664a48be1
+rss_larepublica_deportes.xml,larepublica,deportes,https://larepublica.pe/rss/deportes.xml,2026-11-02T22:23:44,200,111668,f2976a26cfdea162adbb8a4dd98ac0a0a923f8d1e68deddd1564d49d4566c760
+rss_larepublica_ciencia.xml,larepublica,ciencia,https://larepublica.pe/rss/ciencia.xml,2026-11-02T22:23:46,200,92185,54a0d801da55afe785843b1dea249478f2b63571cea3047af9bf08a0087bf8a5
+rss_elcomercio_politica.xml,elcomercio,politica,https://elcomercio.pe/arc/outboundfeeds/google-news-feed/category/politica/?outputType=xml,2026-11-02T22:23:49,200,223590,2e40bb2ebda136bd035b5920c9656588eb25feb6a31acbcc8b4f9258978c364f
+rss_elcomercio_economia.xml,elcomercio,economia,https://elcomercio.pe/arc/outboundfeeds/google-news-feed/category/economia/?outputType=xml,2026-11-02T22:23:52,200,388499,5a5de8db7b694bb1090f503b6ed315b04ae5db148a442567476cf3959a9b8f69
+rss_elcomercio_deporte-total.xml,elcomercio,deporte-total,https://elcomercio.pe/arc/outboundfeeds/google-news-feed/category/deporte-total/?outputType=xml,2026-11-02T22:23:54,200,761629,2a42faaeb6ed8a063538f1b8b1b514e7285c758becc98a014592efecbfe4cc80
+rss_elcomercio_tecnologia.xml,elcomercio,tecnologia,https://elcomercio.pe/arc/outboundfeeds/google-news-feed/category/tecnologia/?outputType=xml,2026-11-02T22:23:59,200,122965,3214f2d656ef60135e868e41eee92293ec2983e2b381ba2516121bc1a45528b3
